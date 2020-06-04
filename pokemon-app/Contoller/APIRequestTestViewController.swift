@@ -38,8 +38,9 @@ class APIRequestTestViewController: UIViewController {
                  _ = try? ManagedPokemon.findOrCreatePokemon(matching: pokemon, in: context)
             }
             try? context.save()
+            self.printDatabaseStatistics()
         }
-        printDatabaseStatistics()
+        
     }
     
     private func printDatabaseStatistics(){
