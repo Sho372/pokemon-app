@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ManagedPokemon" representedClassName=".ManagedPokemon" syncable="YES" codeGenerationType="category">
+        <attribute name="name" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="ManagedPokemon" positionX="-9468" positionY="2190" width="128" height="58"/>
+    </elements>
+</model>
