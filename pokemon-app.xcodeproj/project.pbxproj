@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66004DE42487134A00FF894B /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66004DE32487134A00FF894B /* TeamTableViewCell.swift */; };
 		7F446217247F2F0C000FACF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F446216247F2F0C000FACF0 /* AppDelegate.swift */; };
 		7F446219247F2F0C000FACF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F446218247F2F0C000FACF0 /* SceneDelegate.swift */; };
 		7F44621B247F2F0C000FACF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44621A247F2F0C000FACF0 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66004DE32487134A00FF894B /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		7F446213247F2F0C000FACF0 /* pokemon-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pokemon-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F446216247F2F0C000FACF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F446218247F2F0C000FACF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				7F44621A247F2F0C000FACF0 /* ViewController.swift */,
 				9C93F76E2485D21600F53750 /* APIRequestTestViewController.swift */,
+				66004DE32487134A00FF894B /* TeamTableViewCell.swift */,
 			);
 			path = Contoller;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				7F44621B247F2F0C000FACF0 /* ViewController.swift in Sources */,
 				9C93F7642485C52200F53750 /* Request.swift in Sources */,
 				7F446217247F2F0C000FACF0 /* AppDelegate.swift in Sources */,
+				66004DE42487134A00FF894B /* TeamTableViewCell.swift in Sources */,
 				7F446219247F2F0C000FACF0 /* SceneDelegate.swift in Sources */,
 				9C93F76F2485D21600F53750 /* APIRequestTestViewController.swift in Sources */,
 				9C93F76A2485CC8D00F53750 /* URL+Params.swift in Sources */,
