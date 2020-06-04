@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class APIRequestTestViewController: UIViewController {
 
 //    private var networkAPI: PokeAPIRequest!
+    
+    private var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +25,28 @@ class APIRequestTestViewController: UIViewController {
         PokeAPIRequest.shared.getPokemonNames { (pokemons) in
             if let pokemons = pokemons?.results {
                 print(pokemons.map { $0.name })
+                // local caching with CoreData
+                self.updateDatabase(with: pokemons)
+
             }
+        }
+    }
+    
+    private func updateDatabase(with pokemons: [Pokemon]){
+        container?.performBackgroundTask{ context in
+            for pokemon in pokemons {
+                 _ = try? ManagedPokemon.findOrCreatePokemon(matching: pokemon, in: context)
+            }
+            try? context.save()
+            self.printDatabaseStatistics()
+        }
+        
+    }
+    
+    private func printDatabaseStatistics(){
+        let context = container?.viewContext
+        if let pokemonCount = (try? context?.fetch(ManagedPokemon.fetchRequest()))?.count{
+            print("\(pokemonCount) pokemons")
         }
     }
     
