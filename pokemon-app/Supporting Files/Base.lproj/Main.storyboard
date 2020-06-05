@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Team Detail View Controller-->
         <scene sceneID="V8A-nh-ZAy">
             <objects>
-                <viewController id="83a-Iz-xR6" sceneMemberID="viewController">
+                <viewController id="83a-Iz-xR6" customClass="TeamDetailViewController" customModule="pokemon_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bck-x3-Zmh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,7 +206,7 @@
         <!--Team-->
         <scene sceneID="GTV-oa-pmn">
             <objects>
-                <tableViewController id="Dlv-fg-8bE" sceneMemberID="viewController">
+                <tableViewController id="Dlv-fg-8bE" customClass="TeamListTableViewController" customModule="pokemon_app" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mR1-Ft-wfU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,7 +338,7 @@
         <!--History-->
         <scene sceneID="WwZ-Ky-qpm">
             <objects>
-                <tableViewController id="jJB-jY-WWh" sceneMemberID="viewController">
+                <tableViewController id="jJB-jY-WWh" customClass="HistoryListViewController" customModule="pokemon_app" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1X9-Wq-Ase">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -467,12 +467,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kd1-WY-l13" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860.8695652173915" y="1200.6696428571429"/>
+            <point key="canvasLocation" x="2861" y="1246"/>
         </scene>
-        <!--View Controller-->
+        <!--History Detail View Controller-->
         <scene sceneID="odb-4I-EBv">
             <objects>
-                <viewController id="Lgi-ix-OiJ" sceneMemberID="viewController">
+                <viewController id="Lgi-ix-OiJ" customClass="HistoryDetailViewController" customModule="pokemon_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3eD-hu-kbq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -626,7 +626,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEJ-Q2-xXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3635" y="1201"/>
+            <point key="canvasLocation" x="3635" y="1246"/>
         </scene>
         <!--Request Test View Controller-->
         <scene sceneID="rrX-1k-j3L">
@@ -639,7 +639,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1C-vC-XLE">
                                 <rect key="frame" x="149" y="433" width="117" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="API Request Test"/>
+                                <state key="normal" title="API Request Test">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="pokeAPIRequestTest:" destination="6Vm-Hx-fPu" eventType="touchUpInside" id="Uqy-Ft-ySm"/>
                                 </connections>
@@ -656,7 +658,7 @@
         <!--Record-->
         <scene sceneID="F0W-2m-K6G">
             <objects>
-                <viewController id="p3P-2u-cqu" sceneMemberID="viewController">
+                <viewController id="p3P-2u-cqu" customClass="TeamSelectViewController" customModule="pokemon_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZOa-L1-PWp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -713,7 +715,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bhs-qN-i8j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860.8695652173915" y="-151.33928571428569"/>
+            <point key="canvasLocation" x="2861" y="-196"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kMX-73-jvW">
@@ -756,7 +758,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOv-Sf-aER" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950.7246376811595" y="-151.33928571428569"/>
+            <point key="canvasLocation" x="1951" y="-196"/>
         </scene>
         <!--Team-->
         <scene sceneID="idF-dq-iD7">
@@ -802,7 +804,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esC-tV-ywu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1951" y="1201"/>
+            <point key="canvasLocation" x="1951" y="1246"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

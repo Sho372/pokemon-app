@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class APIRequestTestViewController: UIViewController {
-
+    
 //    private var networkAPI: PokeAPIRequest!
     
     private var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
@@ -27,7 +27,7 @@ class APIRequestTestViewController: UIViewController {
                 print(pokemons.map { $0.name })
                 // local caching with CoreData
                 self.updateDatabase(with: pokemons)
-
+                
             }
         }
     }
@@ -35,7 +35,7 @@ class APIRequestTestViewController: UIViewController {
     private func updateDatabase(with pokemons: [Pokemon]){
         container?.performBackgroundTask{ context in
             for pokemon in pokemons {
-                 _ = try? ManagedPokemon.findOrCreatePokemon(matching: pokemon, in: context)
+                _ = try? ManagedPokemon.findOrCreatePokemon(matching: pokemon, in: context)
             }
             try? context.save()
             self.printDatabaseStatistics()
@@ -50,14 +50,4 @@ class APIRequestTestViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
