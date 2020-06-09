@@ -13,14 +13,9 @@ struct Teams: Codable {
 }
 
 struct Team: Codable {
-    let teamName: String
-    let pokemonName1: String
-    let pokemonName2: String
-    let pokemonName3: String
-    let pokemonName4: String
-    let pokemonName5: String
-    let pokemonName6: String
-    let isArchive: Bool
     let createdAt: Date
+    let isArchive: Bool
+    let teamName: String
     let updatedAt: Date
+    let pokemons: [Pokemon]
 }

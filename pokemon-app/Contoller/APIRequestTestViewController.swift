@@ -38,18 +38,28 @@ class APIRequestTestViewController: UIViewController {
                  _ = try? ManagedPokemon.findOrCreatePokemon(matching: pokemon, in: context)
             }
             try? context.save()
-            self.printDatabaseStatistics()
+            let count = ManagedPokemon.count(in: context)
+            print("\(count) pokemons" )
+            let pokemons = self.fetchPokemons()
+            for pokemon in pokemons {
+                print(pokemon.name!)
+            }
         }
         
     }
-    
-    private func printDatabaseStatistics(){
+        
+    private func fetchPokemons() -> [ManagedPokemon]{
+        
         let context = container?.viewContext
-        if let pokemonCount = (try? context?.fetch(ManagedPokemon.fetchRequest()))?.count{
-            print("\(pokemonCount) pokemons")
+        let request: NSFetchRequest<ManagedPokemon> = ManagedPokemon.fetchRequest()
+        do {
+            return try (context?.fetch(request))!
+        } catch {
+            print("error")
         }
+        return []
     }
-    
+
     /*
     // MARK: - Navigation
 

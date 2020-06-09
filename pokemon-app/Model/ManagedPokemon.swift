@@ -29,4 +29,15 @@ class ManagedPokemon: NSManagedObject {
         pokemon.name = pokemonInfo.name
         return pokemon
     }
+    
+    class func count(in context: NSManagedObjectContext) -> Int{
+        let request: NSFetchRequest<ManagedPokemon> = ManagedPokemon.fetchRequest()
+        
+        do {
+            let count = try context.count(for: request)
+            return count
+        } catch _ as NSError {
+            return 0
+        }
+    }
 }
