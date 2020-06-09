@@ -1,0 +1,16 @@
+PODS:
+  - SearchTextField (1.2.4)
+
+DEPENDENCIES:
+  - SearchTextField
+
+SPEC REPOS:
+  trunk:
+    - SearchTextField
+
+SPEC CHECKSUMS:
+  SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
+
+PODFILE CHECKSUM: 0c5962534853bb70e0665618b41cdd89946dbb3c
+
+COCOAPODS: 1.9.1

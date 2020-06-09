@@ -10,6 +10,13 @@ import UIKit
 
 class HistoryListTableViewController: UITableViewController {
     
+    private let cellId = "HistoryCell"
+    // MARK: Fix this after implementing CoreData part
+    var historyList: [History] = [
+        History(date: Date(), season: "June", party: [Pokemon(name: "Pikachu")], isChosen: [true], battleResult: true),
+        History(date: Date(), season: "May", party: [Pokemon(name: "Ditto")], isChosen: [true], battleResult: false)
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,25 +26,26 @@ class HistoryListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return historyList.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HistoryTableViewCell
+        let history = historyList[indexPath.row]
+        
+        let formatter = DateFormatter()
+        cell.dateLabel.text = formatter.string(from: history.date)
+        
+        if history.battleResult {
+            cell.resultImage.image = UIImage(named: "circle")
+        } else {
+            cell.resultImage.image = UIImage(named: "multiply")
+        }
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

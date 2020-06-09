@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Vm-Hx-fPu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bl2-uy-AHx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -339,12 +339,12 @@
         <scene sceneID="WwZ-Ky-qpm">
             <objects>
                 <tableViewController id="jJB-jY-WWh" customClass="HistoryListViewController" customModule="pokemon_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1X9-Wq-Ase">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1X9-Wq-Ase">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="Wua-wG-8C4">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="120" id="Wua-wG-8C4" customClass="HistoryTableViewCell" customModule="pokemon_app" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wua-wG-8C4" id="Mig-Zu-26E">
@@ -431,8 +431,16 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAL-dO-qlX">
+                                            <rect key="frame" x="340.5" y="0.0" width="73.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="pAL-dO-qlX" secondAttribute="trailing" id="3iU-2r-E99"/>
+                                        <constraint firstItem="pAL-dO-qlX" firstAttribute="top" secondItem="Mig-Zu-26E" secondAttribute="top" id="9oZ-Ds-HSP"/>
                                         <constraint firstItem="j22-La-AhH" firstAttribute="leading" secondItem="bUP-TY-l95" secondAttribute="trailing" constant="4" id="G2W-db-IVC"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="yFB-CJ-csL" secondAttribute="trailing" id="Gjv-tr-dsd"/>
                                         <constraint firstItem="XPi-RR-QI0" firstAttribute="leading" secondItem="Mig-Zu-26E" secondAttribute="leading" constant="4" id="PB4-Ls-Wb6"/>
@@ -457,6 +465,16 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateLabel" destination="8hn-H7-6dW" id="HEe-7V-i6c"/>
+                                    <outlet property="historyIdLabel" destination="pAL-dO-qlX" id="okp-uw-dEs"/>
+                                    <outlet property="opponentLabel1" destination="LNy-81-fOG" id="X0g-f5-W83"/>
+                                    <outlet property="opponentLabel2" destination="mIT-yu-g9n" id="Oxr-ZV-vSB"/>
+                                    <outlet property="opponentLabel3" destination="Kl6-KC-hFc" id="Kjd-kc-zQh"/>
+                                    <outlet property="opponentLabel4" destination="OnC-KK-cgw" id="ipZ-NZ-r3X"/>
+                                    <outlet property="opponentLabel5" destination="rAP-S4-Uir" id="VUW-Dy-WQX"/>
+                                    <outlet property="opponentLabel6" destination="Ie2-f9-Vbd" id="tFs-VM-f8z"/>
+                                    <outlet property="resultImage" destination="XPi-RR-QI0" id="FMN-wg-tFu"/>
+                                    <outlet property="teamNameLabel" destination="j22-La-AhH" id="VHO-Wt-OqE"/>
                                     <segue destination="U5B-Wp-uLr" kind="show" id="tlD-Um-5AY"/>
                                 </connections>
                             </tableViewCell>
@@ -1036,7 +1054,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QkU-o9-HuS"/>
+        <segue reference="tlD-Um-5AY"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
