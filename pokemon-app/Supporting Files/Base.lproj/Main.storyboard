@@ -338,7 +338,7 @@
         <!--History-->
         <scene sceneID="WwZ-Ky-qpm">
             <objects>
-                <tableViewController id="jJB-jY-WWh" customClass="HistoryListViewController" customModule="pokemon_app" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jJB-jY-WWh" customClass="HistoryListTableViewController" customModule="pokemon_app" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1X9-Wq-Ase">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -475,7 +475,7 @@
                                     <outlet property="opponentLabel6" destination="Ie2-f9-Vbd" id="tFs-VM-f8z"/>
                                     <outlet property="resultImage" destination="XPi-RR-QI0" id="FMN-wg-tFu"/>
                                     <outlet property="teamNameLabel" destination="j22-La-AhH" id="VHO-Wt-OqE"/>
-                                    <segue destination="U5B-Wp-uLr" kind="show" id="tlD-Um-5AY"/>
+                                    <segue destination="U5B-Wp-uLr" kind="show" identifier="toHistoryDetail" id="tlD-Um-5AY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
