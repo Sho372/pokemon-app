@@ -27,7 +27,6 @@ class APIRequestTestViewController: UIViewController {
                 print(pokemons.map { $0.name })
                 // local caching with CoreData
                 self.updateDatabase(with: pokemons)
-
             }
         }
     }
@@ -37,27 +36,7 @@ class APIRequestTestViewController: UIViewController {
             for pokemon in pokemons {
                  _ = try? ManagedPokemon.findOrCreatePokemon(matching: pokemon, in: context)
             }
-            try? context.save()
-            let count = ManagedPokemon.count(in: context)
-            print("\(count) pokemons" )
-            let pokemons = self.fetchPokemons()
-            for pokemon in pokemons {
-                print(pokemon.name!)
-            }
         }
-        
-    }
-        
-    private func fetchPokemons() -> [ManagedPokemon]{
-        
-        let context = container?.viewContext
-        let request: NSFetchRequest<ManagedPokemon> = ManagedPokemon.fetchRequest()
-        do {
-            return try (context?.fetch(request))!
-        } catch {
-            print("error")
-        }
-        return []
     }
 
     /*

@@ -30,6 +30,10 @@ class ManagedPokemon: NSManagedObject {
         return pokemon
     }
     
+    /// Get count of entities of Pokemon
+    /// - Parameters:
+    ///   - in: context
+    /// - Returns: count of entities of Pokemon
     class func count(in context: NSManagedObjectContext) -> Int{
         let request: NSFetchRequest<ManagedPokemon> = ManagedPokemon.fetchRequest()
         
@@ -39,5 +43,21 @@ class ManagedPokemon: NSManagedObject {
         } catch _ as NSError {
             return 0
         }
+    }
+    
+    /// Get all entities of Pokemon
+    /// - Parameters:
+    ///   - in: context
+    /// - Returns: Array of ManagedPokemon
+    class func fetchAll(in context: NSManagedObjectContext) -> [ManagedPokemon] {
+        let request: NSFetchRequest<ManagedPokemon> = ManagedPokemon.fetchRequest()
+        
+        do {
+            let pokemons = try context.fetch(request)
+            return pokemons
+        } catch {
+            print("error")
+        }
+        return []
     }
 }
