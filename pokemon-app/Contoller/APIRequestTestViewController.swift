@@ -27,6 +27,7 @@ class APIRequestTestViewController: UIViewController {
                 print(pokemons.map { $0.name })
                 // local caching with CoreData
                 self.updateDatabase(with: pokemons)
+                
             }
         }
     }
@@ -36,16 +37,17 @@ class APIRequestTestViewController: UIViewController {
             for pokemon in pokemons {
                 _ = try? ManagedPokemon.findOrCreatePokemon(matching: pokemon, in: context)
             }
+            try? context.save()
+            self.printDatabaseStatistics()
+        }
+        
+    }
+    
+    private func printDatabaseStatistics(){
+        let context = container?.viewContext
+        if let pokemonCount = (try? context?.fetch(ManagedPokemon.fetchRequest()))?.count{
+            print("\(pokemonCount) pokemons")
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 }
