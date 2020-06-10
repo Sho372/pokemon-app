@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		66004DE42487134A00FF894B /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66004DE32487134A00FF894B /* TeamTableViewCell.swift */; };
-		7F33912D248F0E22001705FF /* ManagedTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33912C248F0E22001705FF /* ManagedTeam.swift */; };
 		66004DF2248F4DDF00FF894B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66004DF1248F4DDF00FF894B /* HistoryTableViewCell.swift */; };
 		7F446217247F2F0C000FACF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F446216247F2F0C000FACF0 /* AppDelegate.swift */; };
 		7F446219247F2F0C000FACF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F446218247F2F0C000FACF0 /* SceneDelegate.swift */; };
@@ -16,7 +15,6 @@
 		7F446220247F2F0E000FACF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F44621F247F2F0E000FACF0 /* Assets.xcassets */; };
 		7F446223247F2F0E000FACF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F446221247F2F0E000FACF0 /* LaunchScreen.storyboard */; };
 		7F49DE80248870FF0031F317 /* ManagedPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49DE7F248870FF0031F317 /* ManagedPokemon.swift */; };
-		7F8682212489AE6D00B27132 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8682202489AE6D00B27132 /* Team.swift */; };
 		7F98053D24885A66001D8E0E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F98053B24885A66001D8E0E /* Model.xcdatamodeld */; };
 		9C93F7642485C52200F53750 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C93F7632485C52200F53750 /* Request.swift */; };
 		9C93F7672485C5B200F53750 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C93F7662485C5B200F53750 /* Pokemon.swift */; };
@@ -33,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		66004DE32487134A00FF894B /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
-		7F33912C248F0E22001705FF /* ManagedTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedTeam.swift; sourceTree = "<group>"; };
 		66004DF1248F4DDF00FF894B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		7F446213247F2F0C000FACF0 /* pokemon-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pokemon-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F446216247F2F0C000FACF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +40,6 @@
 		7F446222247F2F0E000FACF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F446224247F2F0E000FACF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F49DE7F248870FF0031F317 /* ManagedPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedPokemon.swift; sourceTree = "<group>"; };
-		7F8682202489AE6D00B27132 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		7F98053C24885A66001D8E0E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		9C93F7632485C52200F53750 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		9C93F7662485C5B200F53750 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
@@ -110,11 +106,10 @@
 		9C93F7652485C59F00F53750 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7F8682202489AE6D00B27132 /* Team.swift */,
 				7F98053B24885A66001D8E0E /* Model.xcdatamodeld */,
 				9C93F7662485C5B200F53750 /* Pokemon.swift */,
 				7F49DE7F248870FF0031F317 /* ManagedPokemon.swift */,
-				7F33912C248F0E22001705FF /* ManagedTeam.swift */,
+				9CBAFA8A248AC780007273AD /* Team.swift */,
 				9CBAFA8D248AC81C007273AD /* History.swift */,
 			);
 			path = Model;
@@ -242,8 +237,6 @@
 				7F446217247F2F0C000FACF0 /* AppDelegate.swift in Sources */,
 				66004DE42487134A00FF894B /* TeamTableViewCell.swift in Sources */,
 				7F446219247F2F0C000FACF0 /* SceneDelegate.swift in Sources */,
-				7F33912D248F0E22001705FF /* ManagedTeam.swift in Sources */,
-				7F8682212489AE6D00B27132 /* Team.swift in Sources */,
 				66004DF2248F4DDF00FF894B /* HistoryTableViewCell.swift in Sources */,
 				9CBAFA7F248ABCAA007273AD /* TeamSelectViewController.swift in Sources */,
 				9CBAFA8E248AC81C007273AD /* History.swift in Sources */,
