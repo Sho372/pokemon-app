@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class APIRequestTestViewController: UIViewController {
-
+    
 //    private var networkAPI: PokeAPIRequest!
     
     private var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
@@ -34,7 +34,7 @@ class APIRequestTestViewController: UIViewController {
     private func updateDatabase(with pokemons: [Pokemon]){
         container?.performBackgroundTask{ context in
             for pokemon in pokemons {
-                 _ = try? ManagedPokemon.findOrCreatePokemon(matching: pokemon, in: context)
+                _ = try? ManagedPokemon.findOrCreatePokemon(matching: pokemon, in: context)
             }
         }
     }
@@ -48,5 +48,4 @@ class APIRequestTestViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
