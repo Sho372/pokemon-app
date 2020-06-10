@@ -3,7 +3,20 @@
     <entity name="ManagedPokemon" representedClassName=".ManagedPokemon" syncable="YES" codeGenerationType="category">
         <attribute name="name" attributeType="String"/>
     </entity>
+    <entity name="ManagedTeam" representedClassName=".ManagedTeam" syncable="YES" codeGenerationType="category">
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isArchive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="pokemonName1" attributeType="String"/>
+        <attribute name="pokemonName2" optional="YES" attributeType="String"/>
+        <attribute name="pokemonName3" optional="YES" attributeType="String"/>
+        <attribute name="pokemonName4" optional="YES" attributeType="String"/>
+        <attribute name="pokemonName5" optional="YES" attributeType="String"/>
+        <attribute name="pokemonName6" optional="YES" attributeType="String"/>
+        <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
     <elements>
         <element name="ManagedPokemon" positionX="-9468" positionY="2190" width="128" height="58"/>
+        <element name="ManagedTeam" positionX="-9468" positionY="2196" width="128" height="193"/>
     </elements>
 </model>

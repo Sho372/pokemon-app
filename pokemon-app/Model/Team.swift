@@ -8,7 +8,19 @@
 
 import Foundation
 
+struct Teams {
+    var results: [Team]
+}
+
 struct Team {
     var name: String
-    var party: [Pokemon]
+    var createdAt: Date
+    var isArchive: Bool
+    var updatedAt: Date
+    var pokemonName1: String
+    var pokemonName2: String?
+    var pokemonName3: String?
+    var pokemonName4: String?
+    var pokemonName5: String?
+    var pokemonName6: String?
 }
