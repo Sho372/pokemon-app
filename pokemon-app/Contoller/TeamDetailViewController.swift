@@ -8,33 +8,12 @@
 
 import UIKit
 
-class TeamDetailViewController: UIViewController {
-    
-    struct Identifier {
-        static let unwind = "UnwindToTeamListTableView"
-    }
+class TeamDetailTableViewController: UITableViewController {
     
     // MARK: - Dependency Injection
-    var team: Team!
+    var team: Team?
     
-    var isEditted = false
-    
-    var isAnythingEmpty: Bool {
-        get {
-            if teamNameTextField.text?.isEmpty ?? true
-                || pokemon1TextField.text?.isEmpty ?? true
-                || pokemon2TextField.text?.isEmpty ?? true
-                || pokemon3TextField.text?.isEmpty ?? true
-                || pokemon4TextField.text?.isEmpty ?? true
-                || pokemon5TextField.text?.isEmpty ?? true
-                || pokemon6TextField.text?.isEmpty ?? true {
-                return true
-            } else {
-                return false
-            }
-        }
-    }
-    
+    // MARK: - Storyboard Referencing Outlets
     @IBOutlet var teamNameTextField: UITextField!
     @IBOutlet var archiveSwitch: UISwitch!
     @IBOutlet var pokemon1TextField: UITextField!
@@ -43,45 +22,67 @@ class TeamDetailViewController: UIViewController {
     @IBOutlet var pokemon4TextField: UITextField!
     @IBOutlet var pokemon5TextField: UITextField!
     @IBOutlet var pokemon6TextField: UITextField!
+    @IBOutlet var saveButton: UIBarButtonItem!
+    
+    // MARK: - Identifier
+    struct Identifier {
+        static let unwind = "UnwindToTeamListTableView"
+    }
+    
+    // MARK: - FLAG
+    private var isEditingTeam = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        teamNameTextField.text = team.name
-        pokemon1TextField.text = team.pokemonName1
-        pokemon2TextField.text = team.pokemonName2
-        pokemon3TextField.text = team.pokemonName3
-        pokemon4TextField.text = team.pokemonName4
-        pokemon5TextField.text = team.pokemonName5
-        pokemon6TextField.text = team.pokemonName6
+        if let team = team {
+            isEditingTeam = true
+            teamNameTextField.text = team.name
+            archiveSwitch.isOn = team.isArchive
+            pokemon1TextField.text = team.pokemonName1
+            pokemon2TextField.text = team.pokemonName2
+            pokemon3TextField.text = team.pokemonName3
+            pokemon4TextField.text = team.pokemonName4
+            pokemon5TextField.text = team.pokemonName5
+            pokemon6TextField.text = team.pokemonName6
+        }
     }
     
-    @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
-        isEditted = true
-        teamNameTextField.isUserInteractionEnabled.toggle()
-        pokemon1TextField.isUserInteractionEnabled.toggle()
-        pokemon2TextField.isUserInteractionEnabled.toggle()
-        pokemon3TextField.isUserInteractionEnabled.toggle()
-        pokemon4TextField.isUserInteractionEnabled.toggle()
-        pokemon5TextField.isUserInteractionEnabled.toggle()
-        pokemon6TextField.isUserInteractionEnabled.toggle()
-    }
-    
-    @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
-//        if isEditted {
-            team.name = teamNameTextField.text!
-            team.pokemonName1 = pokemon1TextField.text!
-            team.pokemonName2 = pokemon2TextField.text!
-            team.pokemonName3 = pokemon3TextField.text!
-            team.pokemonName4 = pokemon4TextField.text!
-            team.pokemonName5 = pokemon5TextField.text!
-            team.pokemonName6 = pokemon6TextField.text!
-//        }
-        performSegue(withIdentifier: Identifier.unwind, sender: sender)
+    private func validateTextFields() {
+        let n = teamNameTextField.text ?? ""
+        let p1 = pokemon1TextField.text ?? ""
+        
+        saveButton.isEnabled = !n.isEmpty && !p1.isEmpty
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier, identifier == Identifier.unwind { }
+        if segue.identifier == Identifier.unwind {
+            team = Team(
+                name: teamNameTextField.text ?? "",
+                createdAt: isEditingTeam ? team!.createdAt : Date(),
+                isArchive: archiveSwitch.isOn,
+                updatedAt: Date(),
+                pokemonName1: pokemon1TextField.text!,
+                pokemonName2: pokemon2TextField.text ?? "",
+                pokemonName3: pokemon3TextField.text ?? "",
+                pokemonName4: pokemon4TextField.text ?? "",
+                pokemonName5: pokemon5TextField.text ?? "",
+                pokemonName6: pokemon6TextField.text ?? ""
+            )
+        }
+    }
+    
+    @IBAction func textEditingChanged(_ sender: UITextField) {
+        validateTextFields()
+    }
+    
+    @IBAction func returnKeyPressed(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
 }
