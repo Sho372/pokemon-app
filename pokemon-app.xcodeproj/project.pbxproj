@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		66004DF2248F4DDF00FF894B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66004DF1248F4DDF00FF894B /* HistoryTableViewCell.swift */; };
+		66004DFC24919C2100FF894B /* HistoryDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66004DFB24919C2100FF894B /* HistoryDetailTableViewController.swift */; };
 		7F446217247F2F0C000FACF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F446216247F2F0C000FACF0 /* AppDelegate.swift */; };
 		7F446219247F2F0C000FACF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F446218247F2F0C000FACF0 /* SceneDelegate.swift */; };
 		7F44621E247F2F0C000FACF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F44621C247F2F0C000FACF0 /* Main.storyboard */; };
@@ -29,7 +30,6 @@
 		9CBAFA7F248ABCAA007273AD /* TeamSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAFA7E248ABCAA007273AD /* TeamSelectViewController.swift */; };
 		9CBAFA83248ABCBC007273AD /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAFA82248ABCBC007273AD /* TeamDetailViewController.swift */; };
 		9CBAFA85248ABCC7007273AD /* HistoryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAFA84248ABCC7007273AD /* HistoryListTableViewController.swift */; };
-		9CBAFA87248ABCD3007273AD /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAFA86248ABCD3007273AD /* HistoryDetailViewController.swift */; };
 		9CBAFA89248AC6F7007273AD /* TeamListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAFA88248AC6F7007273AD /* TeamListTableViewController.swift */; };
 		9CBAFA8B248AC780007273AD /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAFA8A248AC780007273AD /* Team.swift */; };
 		9CBAFA8E248AC81C007273AD /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAFA8D248AC81C007273AD /* History.swift */; };
@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		66004DF1248F4DDF00FF894B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		66004DFB24919C2100FF894B /* HistoryDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailTableViewController.swift; sourceTree = "<group>"; };
 		7F446213247F2F0C000FACF0 /* pokemon-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pokemon-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F446216247F2F0C000FACF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F446218247F2F0C000FACF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		9CBAFA7E248ABCAA007273AD /* TeamSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectViewController.swift; sourceTree = "<group>"; };
 		9CBAFA82248ABCBC007273AD /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
 		9CBAFA84248ABCC7007273AD /* HistoryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListTableViewController.swift; sourceTree = "<group>"; };
-		9CBAFA86248ABCD3007273AD /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		9CBAFA88248AC6F7007273AD /* TeamListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListTableViewController.swift; sourceTree = "<group>"; };
 		9CBAFA8A248AC780007273AD /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		9CBAFA8D248AC81C007273AD /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 				9CBAFA88248AC6F7007273AD /* TeamListTableViewController.swift */,
 				9CBAFA82248ABCBC007273AD /* TeamDetailViewController.swift */,
 				9CBAFA84248ABCC7007273AD /* HistoryListTableViewController.swift */,
-				9CBAFA86248ABCD3007273AD /* HistoryDetailViewController.swift */,
+				66004DFB24919C2100FF894B /* HistoryDetailTableViewController.swift */,
 			);
 			path = Contoller;
 			sourceTree = "<group>";
@@ -268,6 +268,7 @@
 				9CBAFA85248ABCC7007273AD /* HistoryListTableViewController.swift in Sources */,
 				9CBAFA87248ABCD3007273AD /* HistoryDetailViewController.swift in Sources */,
 				9C7B91A22491ED6B00A8BBF4 /* TeamTableViewCell.swift in Sources */,
+				66004DFC24919C2100FF894B /* HistoryDetailTableViewController.swift in Sources */,
 				9C93F76A2485CC8D00F53750 /* URL+Params.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

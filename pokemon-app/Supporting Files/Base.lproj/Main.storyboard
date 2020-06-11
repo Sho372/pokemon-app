@@ -524,7 +524,6 @@
                                     <outlet property="opponentLabel6" destination="Ie2-f9-Vbd" id="tFs-VM-f8z"/>
                                     <outlet property="resultImage" destination="XPi-RR-QI0" id="FMN-wg-tFu"/>
                                     <outlet property="teamNameLabel" destination="j22-La-AhH" id="VHO-Wt-OqE"/>
-                                    <segue destination="U5B-Wp-uLr" kind="show" identifier="toHistoryDetail" id="tlD-Um-5AY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -534,15 +533,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="History" id="xJz-4Z-llW"/>
+                    <connections>
+                        <segue destination="U5B-Wp-uLr" kind="show" id="hYs-9B-Goq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kd1-WY-l13" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860.8695652173915" y="1245.5357142857142"/>
+            <point key="canvasLocation" x="2877" y="1246"/>
         </scene>
-        <!--Table View Controller-->
+        <!--History Detail Table View Controller-->
         <scene sceneID="Qi4-wW-Wf5">
             <objects>
-                <tableViewController id="U5B-Wp-uLr" sceneMemberID="viewController">
+                <tableViewController id="U5B-Wp-uLr" customClass="HistoryDetailTableViewController" customModule="pokemon_app" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0LK-hB-FHH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -562,6 +564,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="hCY-Qu-1cX"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="datePicker:" destination="Xqz-7V-2NL" eventType="valueChanged" id="PHc-33-IOp"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -725,182 +730,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GVM-Mi-73d">
-                                        <rect key="frame" x="0.0" y="569" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GVM-Mi-73d" id="Aeq-Jh-s9U">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8Kg-EE-J9a">
-                                                    <rect key="frame" x="16" y="9.5" width="382" height="25"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kzj-hG-qi1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="2n6-Oy-E0u">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </switch>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="dbh-dg-MWg"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="8Kg-EE-J9a" secondAttribute="trailing" constant="16" id="RHh-Ok-WFM"/>
-                                                <constraint firstItem="8Kg-EE-J9a" firstAttribute="centerY" secondItem="Aeq-Jh-s9U" secondAttribute="centerY" id="xPr-vR-xUg"/>
-                                                <constraint firstItem="8Kg-EE-J9a" firstAttribute="leading" secondItem="Aeq-Jh-s9U" secondAttribute="leading" constant="16" id="zsx-At-faO"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="R3B-JF-Hul">
-                                        <rect key="frame" x="0.0" y="612.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R3B-JF-Hul" id="Fps-BJ-0oI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iZq-WI-Wch">
-                                                    <rect key="frame" x="16" y="9.5" width="382" height="25"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iZO-wh-gw8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="1J3-fo-Bf9">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </switch>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="BPc-Mk-Tfq"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="iZq-WI-Wch" firstAttribute="leading" secondItem="Fps-BJ-0oI" secondAttribute="leading" constant="16" id="8CK-Se-oD8"/>
-                                                <constraint firstAttribute="trailing" secondItem="iZq-WI-Wch" secondAttribute="trailing" constant="16" id="Tir-dT-P84"/>
-                                                <constraint firstItem="iZq-WI-Wch" firstAttribute="centerY" secondItem="Fps-BJ-0oI" secondAttribute="centerY" id="eJH-7p-9DA"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="o0j-fV-BfP">
-                                        <rect key="frame" x="0.0" y="656" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o0j-fV-BfP" id="EzW-5W-QhI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jXH-cW-xll">
-                                                    <rect key="frame" x="16" y="9.5" width="382" height="25"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xk8-uE-Tzu">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="zvQ-op-NlX">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </switch>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="X5T-vu-Xxc"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="jXH-cW-xll" firstAttribute="leading" secondItem="EzW-5W-QhI" secondAttribute="leading" constant="16" id="a9I-lI-2bT"/>
-                                                <constraint firstAttribute="trailing" secondItem="jXH-cW-xll" secondAttribute="trailing" constant="16" id="gUQ-us-UKu"/>
-                                                <constraint firstItem="jXH-cW-xll" firstAttribute="centerY" secondItem="EzW-5W-QhI" secondAttribute="centerY" id="ukZ-ge-igM"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GYu-Xe-aBP">
-                                        <rect key="frame" x="0.0" y="699.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GYu-Xe-aBP" id="9xp-8h-ICB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Z48-5y-8ic">
-                                                    <rect key="frame" x="16" y="9.5" width="382" height="25"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QN3-Xv-Ypp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="GiX-wt-OaT">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </switch>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="UCz-XG-WO9"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Z48-5y-8ic" secondAttribute="trailing" constant="16" id="6bL-K2-2Gd"/>
-                                                <constraint firstItem="Z48-5y-8ic" firstAttribute="centerY" secondItem="9xp-8h-ICB" secondAttribute="centerY" id="S5l-Ct-2vP"/>
-                                                <constraint firstItem="Z48-5y-8ic" firstAttribute="leading" secondItem="9xp-8h-ICB" secondAttribute="leading" constant="16" id="djV-dY-L9K"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2z3-UV-f4X">
-                                        <rect key="frame" x="0.0" y="743" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2z3-UV-f4X" id="59o-tF-enH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QMi-x2-esI">
-                                                    <rect key="frame" x="16" y="9.5" width="382" height="25"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IAs-e7-kmA">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="jHF-6G-eHY">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </switch>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="2OX-yN-jCW"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="QMi-x2-esI" secondAttribute="trailing" constant="16" id="YXx-9n-Jed"/>
-                                                <constraint firstItem="QMi-x2-esI" firstAttribute="centerY" secondItem="59o-tF-enH" secondAttribute="centerY" id="Zt3-RV-hBF"/>
-                                                <constraint firstItem="QMi-x2-esI" firstAttribute="leading" secondItem="59o-tF-enH" secondAttribute="leading" constant="16" id="vu6-MK-nJS"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="RESULT" id="qAv-wt-SWV">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0rZ-Is-9vS">
-                                        <rect key="frame" x="0.0" y="842.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="625" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0rZ-Is-9vS" id="IdY-Jc-Bw9">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -926,13 +761,25 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="cLk-Ty-bHy">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Edit" id="pPf-2h-JAX"/>
-                            <barButtonItem title="Done" id="NfU-8l-sXR"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="pPf-2h-JAX"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="Juo-Rn-Dun" id="uo8-e2-Fce"/>
+                        <outlet property="myPokemonLabel" destination="Qvj-ad-XWI" id="CTo-zg-Deh"/>
+                        <outlet property="myPokemonSwitch" destination="KHs-vb-l89" id="w0n-Gz-LFO"/>
+                        <outlet property="myPokemonTable" destination="PQe-n3-Q8p" id="0Rw-Pq-5GQ"/>
+                        <outlet property="opponentPokemonLabel" destination="2QJ-cy-Not" id="KIN-0g-yhF"/>
+                        <outlet property="opponentPokemonSwitch" destination="bdD-we-rXe" id="QrL-eQ-gDs"/>
+                        <outlet property="opponentTable" destination="MF2-4D-Eaq" id="h1A-ou-0SS"/>
+                        <outlet property="resultSegment" destination="AyC-Oo-mxy" id="37f-ZV-chH"/>
+                        <outlet property="rightBarButton" destination="pPf-2h-JAX" id="rQq-Ia-qKW"/>
+                        <outlet property="seasonPicker" destination="gHT-7R-sY1" id="zeR-EL-TsT"/>
+                        <outlet property="singleDoubleSegment" destination="WKM-6X-avm" id="Wgw-TY-fcS"/>
+                        <outlet property="teamPicker" destination="oMu-nU-Woz" id="APs-Fp-8Nz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PvK-eU-g7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Xqz-7V-2NL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3738" y="1246"/>
         </scene>
@@ -1106,7 +953,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tlD-Um-5AY"/>
+        <segue reference="hYs-9B-Goq"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
