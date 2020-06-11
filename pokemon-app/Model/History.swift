@@ -9,10 +9,10 @@
 import Foundation
 
 struct History {
-    var id: Int
-    var date: Date
-    var season: String
-    var party: [Pokemon]
-    var isChosen: [Bool]
-    var battleResult: Bool
+    var teamName: String
+    var seasonName: String
+    var isWin: Bool
+    var isSingle: Bool
+    var createdAt: Date
+    var updatedAt: Date
 }
