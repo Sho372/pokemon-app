@@ -26,18 +26,19 @@ class TeamDetailTableViewController: UITableViewController {
     
     // MARK: - Identifier
     struct Identifier {
-        static let unwind = "UnwindToTeamListTableView"
+        static let select = "SelectPokemonSegue"
+        static let unwindWithData = "UnwindWithDataSegue"
+        static let unwindCancel = "UnwindCancelSegue"
     }
     
-    // MARK: - FLAG
-    private var isEditingTeam = false
-    
-    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        PokeAPIHandler.shared.requestJSON(completion: { _ in return })
+        
         if let team = team {
-            isEditingTeam = true
+            navigationItem.title = "Edit Team"
             teamNameTextField.text = team.name
             archiveSwitch.isOn = team.isArchive
             pokemonLabel1.text = team.pokemonName1
@@ -47,11 +48,11 @@ class TeamDetailTableViewController: UITableViewController {
             pokemonLabel5.text = team.pokemonName5
             pokemonLabel6.text = team.pokemonName6
         }
-        validateTexts()
+        validateData()
     }
     
     @IBAction func textEditingChanged(_ sender: UITextField) {
-        validateTexts()
+        validateData()
     }
     
     @IBAction func returnKeyPressed(_ sender: UITextField) {
@@ -59,24 +60,20 @@ class TeamDetailTableViewController: UITableViewController {
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: Identifier.unwindCancel, sender: self)
     }
     
-    private func validateTexts() {
-        let n = teamNameTextField.text ?? ""
-        let p1 = pokemonLabel1.text ?? ""
-        
-        saveButton.isEnabled = !n.isEmpty && !p1.isEmpty
+    private func validateData() {
+        saveButton.isEnabled = !(teamNameTextField?.text ?? "").isEmpty && pokemonLabel1.text != "Not Set"
     }
     
+    // MARK: - Table View Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        //        tableView.deselectRow(at: indexPath, animated: true)
         
         switch (indexPath.section) {
         case (2):
-            let selectPokemonTVC = SelectPokemonTableViewController()
-            selectPokemonTVC.delegate = self
-            navigationController?.pushViewController(selectPokemonTVC, animated: true)
+            performSegue(withIdentifier: Identifier.select, sender: self)
         default:
             break;
         }
@@ -84,30 +81,33 @@ class TeamDetailTableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Identifier.unwind {
-            team = Team(
-                name: teamNameTextField.text ?? "",
-                createdAt: isEditingTeam ? team!.createdAt : Date(),
-                isArchive: archiveSwitch.isOn,
-                updatedAt: Date(),
-                pokemonName1: pokemonLabel1.text!,
-                pokemonName2: pokemonLabel2.text ?? "",
-                pokemonName3: pokemonLabel3.text ?? "",
-                pokemonName4: pokemonLabel4.text ?? "",
-                pokemonName5: pokemonLabel5.text ?? "",
-                pokemonName6: pokemonLabel6.text ?? ""
-            )
+        if let identifier = segue.identifier {
+            switch identifier {
+            case Identifier.unwindWithData :
+                let date = Date()
+                team = Team(
+                    name: teamNameTextField.text ?? "",
+                    createdAt: team?.createdAt ?? date,
+                    isArchive: archiveSwitch.isOn,
+                    updatedAt: date,
+                    pokemonName1: pokemonLabel1.text!,
+                    pokemonName2: pokemonLabel2.text ?? "",
+                    pokemonName3: pokemonLabel3.text ?? "",
+                    pokemonName4: pokemonLabel4.text ?? "",
+                    pokemonName5: pokemonLabel5.text ?? "",
+                    pokemonName6: pokemonLabel6.text ?? ""
+                )
+            case Identifier.unwindCancel:
+                break
+            case Identifier.select:
+                let indexPath = tableView.indexPathForSelectedRow!
+                let selectPokemonTVC = segue.destination as! SelectPokemonTableViewController
+                selectPokemonTVC.selectedPokemon = tableView.cellForRow(at: indexPath)!.detailTextLabel?.text ?? ""
+            default:
+                break
+            }
         }
     }
     
-    
-    
 }
 
-extension TeamDetailTableViewController: SelectPokemonTableViewControllerDelegate {
-    
-    func didSelect(name: String) {
-        
-    }
-    
-}
