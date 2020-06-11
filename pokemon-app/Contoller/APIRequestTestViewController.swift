@@ -11,28 +11,28 @@ import CoreData
 
 class APIRequestTestViewController: UIViewController {
     
-//    private var networkAPI: PokeAPIRequest!
+    //    private var networkAPI: PokeAPIRequest!
     
     private var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        networkAPI = PokeAPIRequest.shared
+        //        networkAPI = PokeAPIRequest.shared
     }
     
     @IBAction func pokeAPIRequestTest(_ sender: UIButton) {
-        PokeAPIRequest.shared.getPokemonNames { (pokemons) in
-            if let pokemons = pokemons?.results {
-                print(pokemons.map { $0.name })
-                // local caching with CoreData
-                self.updateDatabase(with: pokemons)
-                
+        PokeAPIHandler.shared.requestJSON { (pokemons) in
+            if let pokemons = pokemons{
+                print(pokemons.results.map({ $0.name.capitalized }).sorted(by: <))
             }
         }
+        
+        // local caching with CoreData
+        // self.updateDatabase(with: pokemons)
     }
     
-    private func updateDatabase(with pokemons: [Pokemon]){
+    private func updateDatabase(with pokemons: [Pokemon]) {
         container?.performBackgroundTask{ context in
             for pokemon in pokemons {
                 _ = try? ManagedPokemon.findOrCreatePokemon(matching: pokemon, in: context)
@@ -42,12 +42,12 @@ class APIRequestTestViewController: UIViewController {
             )
             let secondTeam = Team(name: "second team", createdAt: Date(), isArchive: false, updatedAt: Date(), pokemonName1: "aaa", pokemonName2: "bbb", pokemonName3: "ccc", pokemonName4: "ddd", pokemonName5: "eee", pokemonName6: "fff"
             )
-            try? ManagedTeam.findOrCreateTeam(matching: firstTeam, in: context)
-            try? ManagedTeam.findOrCreateTeam(matching: secondTeam, in: context)
-            try? context.save()
-
+            _ = try? ManagedTeam.findOrCreateTeam(matching: firstTeam, in: context)
+            _ = try? ManagedTeam.findOrCreateTeam(matching: secondTeam, in: context)
+            _ = try? context.save()
+            
             let count = ManagedTeam.count(in: context)
-                print("\(count)teams" )
+            print("\(count)teams" )
             let teams = ManagedTeam.fetchAll(in: context)
             for team in teams {
                 print(team.name)

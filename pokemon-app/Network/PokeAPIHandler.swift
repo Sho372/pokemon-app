@@ -1,5 +1,5 @@
 //
-//  Request.swift
+//  PokeAPIHandler.swift
 //  pokemon-app
 //
 //  Created by Richard Cho on 2020-06-01.
@@ -9,27 +9,47 @@
 import UIKit
 import Foundation
 
-class PokeAPIRequest {
+class PokeAPIHandler {
+    
+    private static let baseURL = "https://pokeapi.co/api/v2/"
+    
+    private struct EndPoint {
+        static let pokemon = "pokemon"
+    }
+    
+    private struct Parameter {
+        static let limit = "limit"
+    }
+    
+    private struct Key {
+        static let cachedPokemonNames: NSString = "CachedPokemonNames"
+    }
     
     // Singleton
-    static let shared = PokeAPIRequest()
+    static let shared = PokeAPIHandler()
     
     private var dataTask: URLSessionDataTask?
     
+    private let cache = NSCache<NSString, Pokemons>()
+    
     private init() {}
     
-    func getPokemonNames(completion: @escaping (Pokemons?) -> Void) {
-        let url = URL(string: EndPoint.baseURL)!
-            .appendingPathComponent("pokemon")
-            .withQueries([Parameter.limit: "1000"])!
-        
-        fetch(from: url) { (result: Result<Pokemons, NetworkError>) in
-            switch result {
-            case.success(let pokemons):
-                completion(pokemons)
-            case.failure(let error):
-                debugPrint(error.errorDescription!)
-                completion(nil)
+    func requestJSON(completion: @escaping (Pokemons?) -> Void) {
+        if let cachedPokemons = cache.object(forKey: Key.cachedPokemonNames) {
+            completion(cachedPokemons)
+        } else {
+            let url = URL(string: PokeAPIHandler.baseURL)!
+                .appendingPathComponent(EndPoint.pokemon)
+                .withQueries([Parameter.limit: "1000"])!
+            fetch(from: url) { (result: Result<Pokemons, NetworkError>) in
+                switch result {
+                case .success(let pokemons):
+                    self.cache.setObject(pokemons, forKey: Key.cachedPokemonNames)
+                    completion(pokemons)
+                case .failure(let error):
+                    debugPrint(error.errorDescription!)
+                    completion(nil)
+                }
             }
         }
     }
@@ -60,15 +80,6 @@ class PokeAPIRequest {
         dataTask?.resume()
     }
     
-    struct EndPoint {
-        static let baseURL = "https://pokeapi.co/api/v2/"
-    }
-    
-    struct Parameter {
-        static let pokemon = "pokemon"
-        static let limit = "limit"
-    }
-    
     enum NetworkError: Error {
         case client(message: String)
         case server
@@ -76,7 +87,7 @@ class PokeAPIRequest {
     
 }
 
-extension PokeAPIRequest.NetworkError: LocalizedError {
+extension PokeAPIHandler.NetworkError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .server:

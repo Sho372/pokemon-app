@@ -39,7 +39,6 @@ class TeamListTableViewController: UITableViewController {
     }
     
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Identifier.editDetail {
             let indexPath = tableView.indexPathForSelectedRow!
