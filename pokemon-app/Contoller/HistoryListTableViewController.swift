@@ -14,8 +14,8 @@ class HistoryListTableViewController: UITableViewController {
     
     // MARK: Fix this after implementing CoreData part
     var historyList: [History] = [
-        History(date: Date(), season: "June", party: [Pokemon(name: "Pikachu")], isChosen: [true], battleResult: true),
-        History(date: Date(), season: "May", party: [Pokemon(name: "Ditto")], isChosen: [true], battleResult: false)
+        History(id: 0, date: Date(), season: "June", party: [Pokemon(name: "Pikachu")], isChosen: [true], battleResult: true),
+        History(id: 0, date: Date(), season: "May", party: [Pokemon(name: "Ditto")], isChosen: [true], battleResult: false)
     ]
     
     override func viewDidLoad() {
