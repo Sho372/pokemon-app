@@ -11,8 +11,8 @@ import CoreData
 
 class ManagedHistory: NSManagedObject {
     class func createHistory(history historyInfo: History,
-                             selectedPokemons selectedInfo: [ManagedSelectedPokemons],
-                             opponentPokemons opponentInfo: [ManagedOpponentPokemons], in context: NSManagedObjectContext) throws -> ManagedHistory {
+                             selectedPokemons selectedInfo: [ManagedSelectedPokemons?],
+                             opponentPokemons opponentInfo: [ManagedOpponentPokemons?], in context: NSManagedObjectContext) throws -> ManagedHistory {
         let history = ManagedHistory(context: context)
         history.teamName = historyInfo.teamName
         history.isWin = historyInfo.isWin

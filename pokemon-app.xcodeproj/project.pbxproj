@@ -15,7 +15,9 @@
 		7F446220247F2F0E000FACF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F44621F247F2F0E000FACF0 /* Assets.xcassets */; };
 		7F446223247F2F0E000FACF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F446221247F2F0E000FACF0 /* LaunchScreen.storyboard */; };
 		7F49DE80248870FF0031F317 /* ManagedPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49DE7F248870FF0031F317 /* ManagedPokemon.swift */; };
+		7F896BBD2492042000689348 /* SelectedPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F896BBC2492042000689348 /* SelectedPokemon.swift */; };
 		7F98053D24885A66001D8E0E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F98053B24885A66001D8E0E /* Model.xcdatamodeld */; };
+		7FE2D8D524920631003A9BC6 /* OpponentPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE2D8D424920631003A9BC6 /* OpponentPokemon.swift */; };
 		7FF8CAD524914E86007D8DAB /* ManagedTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8CAD424914E86007D8DAB /* ManagedTeam.swift */; };
 		7FF8CAD724917E23007D8DAB /* ManagedHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8CAD624917E23007D8DAB /* ManagedHistory.swift */; };
 		7FF8CAD924917E79007D8DAB /* ManagedSelectedPokemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8CAD824917E79007D8DAB /* ManagedSelectedPokemons.swift */; };
@@ -44,7 +46,9 @@
 		7F446222247F2F0E000FACF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F446224247F2F0E000FACF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F49DE7F248870FF0031F317 /* ManagedPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedPokemon.swift; sourceTree = "<group>"; };
+		7F896BBC2492042000689348 /* SelectedPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPokemon.swift; sourceTree = "<group>"; };
 		7F98053C24885A66001D8E0E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7FE2D8D424920631003A9BC6 /* OpponentPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpponentPokemon.swift; sourceTree = "<group>"; };
 		7FF8CAD424914E86007D8DAB /* ManagedTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedTeam.swift; sourceTree = "<group>"; };
 		7FF8CAD624917E23007D8DAB /* ManagedHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedHistory.swift; sourceTree = "<group>"; };
 		7FF8CAD824917E79007D8DAB /* ManagedSelectedPokemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedSelectedPokemons.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				7FF8CAD624917E23007D8DAB /* ManagedHistory.swift */,
 				7FF8CAD824917E79007D8DAB /* ManagedSelectedPokemons.swift */,
 				7FF8CADA24917EA6007D8DAB /* ManagedOpponentPokemons.swift */,
+				7F896BBC2492042000689348 /* SelectedPokemon.swift */,
+				7FE2D8D424920631003A9BC6 /* OpponentPokemon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			files = (
 				9C93F7672485C5B200F53750 /* Pokemon.swift in Sources */,
 				9C93F7642485C52200F53750 /* Request.swift in Sources */,
+				7F896BBD2492042000689348 /* SelectedPokemon.swift in Sources */,
 				7FF8CAD924917E79007D8DAB /* ManagedSelectedPokemons.swift in Sources */,
 				7F98053D24885A66001D8E0E /* Model.xcdatamodeld in Sources */,
 				9CBAFA8B248AC780007273AD /* Team.swift in Sources */,
@@ -251,6 +258,7 @@
 				66004DE42487134A00FF894B /* TeamTableViewCell.swift in Sources */,
 				7FF8CAD524914E86007D8DAB /* ManagedTeam.swift in Sources */,
 				7F446219247F2F0C000FACF0 /* SceneDelegate.swift in Sources */,
+				7FE2D8D524920631003A9BC6 /* OpponentPokemon.swift in Sources */,
 				66004DF2248F4DDF00FF894B /* HistoryTableViewCell.swift in Sources */,
 				9CBAFA7F248ABCAA007273AD /* TeamSelectViewController.swift in Sources */,
 				7FF8CADB24917EA6007D8DAB /* ManagedOpponentPokemons.swift in Sources */,
