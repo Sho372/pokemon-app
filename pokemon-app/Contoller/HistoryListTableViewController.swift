@@ -14,10 +14,7 @@ class HistoryListTableViewController: UITableViewController {
     private let segueId = "toHistoryDetail"
     
     // MARK: Fix this after implementing CoreData part
-    private var historyList: [History] = [
-        History(date: Date(), season: "June", party: [Pokemon(name: "Pikachu")], isChosen: [true], battleResult: true),
-        History(date: Date(), season: "May", party: [Pokemon(name: "Ditto")], isChosen: [true], battleResult: false)
-    ]
+    private var historyList: [History] = []
     
     private var selectedHistory: History?
     
