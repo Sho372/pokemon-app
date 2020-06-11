@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ManagedHistory" representedClassName=".ManagedHistory" syncable="YES" codeGenerationType="category">
-        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="isSingle" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="isWin" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="seasonName" optional="YES" attributeType="String"/>
-        <attribute name="teamName" optional="YES" attributeType="String"/>
-        <attribute name="updateAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="opponentPokemons" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ManagedOpponentPokemon" inverseName="history" inverseEntity="ManagedOpponentPokemon"/>
-        <relationship name="selectedPokemons" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ManagedSelectedPokemon" inverseName="history" inverseEntity="ManagedSelectedPokemon"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isSingle" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isWin" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="seasonName" attributeType="String"/>
+        <attribute name="teamName" attributeType="String"/>
+        <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="opponentPokemons" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ManagedOpponentPokemons" inverseName="history" inverseEntity="ManagedOpponentPokemons"/>
+        <relationship name="selectedPokemons" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ManagedSelectedPokemons" inverseName="history" inverseEntity="ManagedSelectedPokemons"/>
     </entity>
-    <entity name="ManagedOpponentPokemon" representedClassName=".ManagedOpponentPokemons" syncable="YES" codeGenerationType="category">
-        <attribute name="isSelected" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="opponentPokemonName" attributeType="String"/>
+    <entity name="ManagedOpponentPokemons" representedClassName=".ManagedOpponentPokemons" syncable="YES" codeGenerationType="category">
+        <attribute name="isSelected" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="opponentPokemonName" optional="YES" attributeType="String"/>
         <attribute name="sequence" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="history" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManagedHistory" inverseName="opponentPokemons" inverseEntity="ManagedHistory"/>
     </entity>
     <entity name="ManagedPokemon" representedClassName=".ManagedPokemon" syncable="YES" codeGenerationType="category">
         <attribute name="name" attributeType="String"/>
     </entity>
-    <entity name="ManagedSelectedPokemon" representedClassName=".ManagedSelectedPokemon" syncable="YES" codeGenerationType="category">
-        <attribute name="selectedPokemonName" optional="YES" attributeType="String"/>
-        <attribute name="sequence" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    <entity name="ManagedSelectedPokemons" representedClassName=".ManagedSelectedPokemons" syncable="YES" codeGenerationType="category">
+        <attribute name="selectedPokemonName" attributeType="String"/>
+        <attribute name="sequence" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="history" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManagedHistory" inverseName="selectedPokemons" inverseEntity="ManagedHistory"/>
     </entity>
     <entity name="ManagedTeam" representedClassName=".ManagedTeam" syncable="YES" codeGenerationType="category">
@@ -37,10 +37,10 @@
         <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="ManagedPokemon" positionX="-9468" positionY="2190" width="128" height="58"/>
-        <element name="ManagedTeam" positionX="-9468" positionY="2196" width="128" height="193"/>
         <element name="ManagedHistory" positionX="-9459" positionY="2277" width="128" height="163"/>
-        <element name="ManagedSelectedPokemon" positionX="-9441" positionY="2295" width="128" height="88"/>
-        <element name="ManagedOpponentPokemon" positionX="-9423" positionY="2304" width="128" height="103"/>
+        <element name="ManagedOpponentPokemons" positionX="-9423" positionY="2304" width="128" height="103"/>
+        <element name="ManagedPokemon" positionX="-9468" positionY="2190" width="128" height="58"/>
+        <element name="ManagedSelectedPokemons" positionX="-9441" positionY="2295" width="128" height="88"/>
+        <element name="ManagedTeam" positionX="-9468" positionY="2196" width="128" height="193"/>
     </elements>
 </model>

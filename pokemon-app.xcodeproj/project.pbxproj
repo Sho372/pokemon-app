@@ -18,7 +18,7 @@
 		7F98053D24885A66001D8E0E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F98053B24885A66001D8E0E /* Model.xcdatamodeld */; };
 		7FF8CAD524914E86007D8DAB /* ManagedTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8CAD424914E86007D8DAB /* ManagedTeam.swift */; };
 		7FF8CAD724917E23007D8DAB /* ManagedHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8CAD624917E23007D8DAB /* ManagedHistory.swift */; };
-		7FF8CAD924917E79007D8DAB /* ManagedSelectedPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8CAD824917E79007D8DAB /* ManagedSelectedPokemon.swift */; };
+		7FF8CAD924917E79007D8DAB /* ManagedSelectedPokemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8CAD824917E79007D8DAB /* ManagedSelectedPokemons.swift */; };
 		7FF8CADB24917EA6007D8DAB /* ManagedOpponentPokemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF8CADA24917EA6007D8DAB /* ManagedOpponentPokemons.swift */; };
 		9C93F7642485C52200F53750 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C93F7632485C52200F53750 /* Request.swift */; };
 		9C93F7672485C5B200F53750 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C93F7662485C5B200F53750 /* Pokemon.swift */; };
@@ -47,7 +47,7 @@
 		7F98053C24885A66001D8E0E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		7FF8CAD424914E86007D8DAB /* ManagedTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedTeam.swift; sourceTree = "<group>"; };
 		7FF8CAD624917E23007D8DAB /* ManagedHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedHistory.swift; sourceTree = "<group>"; };
-		7FF8CAD824917E79007D8DAB /* ManagedSelectedPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedSelectedPokemon.swift; sourceTree = "<group>"; };
+		7FF8CAD824917E79007D8DAB /* ManagedSelectedPokemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedSelectedPokemons.swift; sourceTree = "<group>"; };
 		7FF8CADA24917EA6007D8DAB /* ManagedOpponentPokemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedOpponentPokemons.swift; sourceTree = "<group>"; };
 		9C93F7632485C52200F53750 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		9C93F7662485C5B200F53750 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				9CBAFA8D248AC81C007273AD /* History.swift */,
 				7FF8CAD424914E86007D8DAB /* ManagedTeam.swift */,
 				7FF8CAD624917E23007D8DAB /* ManagedHistory.swift */,
-				7FF8CAD824917E79007D8DAB /* ManagedSelectedPokemon.swift */,
+				7FF8CAD824917E79007D8DAB /* ManagedSelectedPokemons.swift */,
 				7FF8CADA24917EA6007D8DAB /* ManagedOpponentPokemons.swift */,
 			);
 			path = Model;
@@ -242,7 +242,7 @@
 			files = (
 				9C93F7672485C5B200F53750 /* Pokemon.swift in Sources */,
 				9C93F7642485C52200F53750 /* Request.swift in Sources */,
-				7FF8CAD924917E79007D8DAB /* ManagedSelectedPokemon.swift in Sources */,
+				7FF8CAD924917E79007D8DAB /* ManagedSelectedPokemons.swift in Sources */,
 				7F98053D24885A66001D8E0E /* Model.xcdatamodeld in Sources */,
 				9CBAFA8B248AC780007273AD /* Team.swift in Sources */,
 				7F49DE80248870FF0031F317 /* ManagedPokemon.swift in Sources */,

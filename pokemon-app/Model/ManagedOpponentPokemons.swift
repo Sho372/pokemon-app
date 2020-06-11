@@ -10,5 +10,11 @@ import UIKit
 import CoreData
 
 class ManagedOpponentPokemons: NSManagedObject {
-
+    class func createOpponentPokemon(sequence seq: Int16, opponetPokemonName name: String?, isSelected selected: Bool, in context: NSManagedObjectContext) throws -> ManagedOpponentPokemons {
+        let opponent = ManagedOpponentPokemons(context: context)
+        opponent.sequence = seq
+        opponent.opponentPokemonName = name
+        opponent.isSelected = selected
+        return opponent
+    }
 }
