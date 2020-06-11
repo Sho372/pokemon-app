@@ -11,12 +11,15 @@ import UIKit
 class HistoryListTableViewController: UITableViewController {
     
     private let cellId = "HistoryCell"
+    private let segueId = "toHistoryDetail"
     
     // MARK: Fix this after implementing CoreData part
-    var historyList: [History] = [
+    private var historyList: [History] = [
         History(date: Date(), season: "June", party: [Pokemon(name: "Pikachu")], isChosen: [true], battleResult: true),
         History(date: Date(), season: "May", party: [Pokemon(name: "Ditto")], isChosen: [true], battleResult: false)
     ]
+    
+    private var selectedHistory: History?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +27,6 @@ class HistoryListTableViewController: UITableViewController {
         // Bring team data from database
         // Filter histories only matchs with selected team
     }
-
-    // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -50,10 +51,18 @@ class HistoryListTableViewController: UITableViewController {
 
         return cell
     }
+ 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedHistory = historyList[indexPath.row]
+        
+        performSegue(withIdentifier: segueId, sender: nil)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toHistoryDetail" {
-            let detailView = segue.destination as! HistoryDetailViewController
+        if segue.identifier == segueId {
+            let detailView = segue.destination as! HistoryDetailTableViewController
+            detailView.screenMode = HistoryDetailTableViewController.ScreenMode.refer
+            detailView.history = selectedHistory!
         }
     }
 }
