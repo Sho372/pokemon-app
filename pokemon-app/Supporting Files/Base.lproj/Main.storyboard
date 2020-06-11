@@ -198,6 +198,16 @@
                             <barButtonItem systemItem="done" id="h2u-qL-5gz"/>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="archiveSwitch" destination="C2C-0i-FJ8" id="m8F-yg-oby"/>
+                        <outlet property="pokemon1TextField" destination="Peb-Nl-YuT" id="USz-sG-0ob"/>
+                        <outlet property="pokemon2TextField" destination="d7h-kA-5Ok" id="ZtP-Vb-BOL"/>
+                        <outlet property="pokemon3TextField" destination="2UF-Y5-gEB" id="OAi-JC-1JX"/>
+                        <outlet property="pokemon4TextField" destination="wrn-gb-2At" id="aEL-8v-0Lb"/>
+                        <outlet property="pokemon5TextField" destination="4kk-GV-WXr" id="CN7-Xg-z86"/>
+                        <outlet property="pokemon6TextField" destination="rZX-6f-YBU" id="75l-xk-cRk"/>
+                        <outlet property="teamNameTextField" destination="XnA-Tu-Zkd" id="IaL-cl-CTt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Sc-bU-9oQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,7 +222,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="I9l-zd-87e" customClass="TeamTableViewCell" customModule="pokemon_app" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="I9l-zd-87e" customClass="TeamListTableViewCell" customModule="pokemon_app" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I9l-zd-87e" id="BfZ-et-LVa">
@@ -318,6 +328,13 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="pokemon1Label" destination="Flo-db-26Y" id="nVO-Br-ISM"/>
+                                    <outlet property="pokemon2Label" destination="mM9-mh-Suo" id="e6r-ul-MWZ"/>
+                                    <outlet property="pokemon3Label" destination="9wK-6c-KaD" id="tg0-D0-kPR"/>
+                                    <outlet property="pokemon4Label" destination="SJ4-6N-UcZ" id="rTP-Ps-Ejg"/>
+                                    <outlet property="pokemon5Label" destination="He9-Tb-qq8" id="3kh-DO-bbZ"/>
+                                    <outlet property="pokemon6Label" destination="M78-6Z-Mx6" id="YOd-xe-U0i"/>
+                                    <outlet property="teamNameLabel" destination="Rnh-T1-oeT" id="KC3-IN-fzh"/>
                                     <segue destination="83a-Iz-xR6" kind="show" id="zdf-rz-4lc"/>
                                 </connections>
                             </tableViewCell>

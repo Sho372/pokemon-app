@@ -10,6 +10,18 @@ import UIKit
 
 class TeamDetailViewController: UIViewController {
 
+    // MARK: - Dependency Injection
+    var team: Team!
+    
+    @IBOutlet var teamNameTextField: UITextField!
+    @IBOutlet var archiveSwitch: UISwitch!
+    @IBOutlet var pokemon1TextField: UITextField!
+    @IBOutlet var pokemon2TextField: UITextField!
+    @IBOutlet var pokemon3TextField: UITextField!
+    @IBOutlet var pokemon4TextField: UITextField!
+    @IBOutlet var pokemon5TextField: UITextField!
+    @IBOutlet var pokemon6TextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -9,6 +9,7 @@
 import Foundation
 
 struct History {
+    var id: Int
     var date: Date
     var season: String
     var party: [Pokemon]
