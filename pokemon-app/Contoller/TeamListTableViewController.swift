@@ -10,7 +10,19 @@ import UIKit
 
 class TeamListTableViewController: UITableViewController {
     
-    var teamList: [Team]!
+    // MARK: - TEST DATA
+    var teamList: [Team] = [Team(
+        name: "asdf",
+        createdAt: Date(),
+        isArchive: false,
+        updatedAt: Date(),
+        pokemonName1: "data1",
+        pokemonName2: "data2",
+        pokemonName3: "data3",
+        pokemonName4: "data4",
+        pokemonName5: "data5",
+        pokemonName6: "data6"
+        )]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +45,16 @@ class TeamListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! TeamListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TeamTableViewCell", for: indexPath) as! TeamTableViewCell
         let team = teamList[indexPath.row]
         
         cell.teamNameLabel.text = team.name
-        cell.pokemon1Label.text = team.party[0].name
-        cell.pokemon2Label.text = team.party[1].name
-        cell.pokemon3Label.text = team.party[2].name
-        cell.pokemon4Label.text = team.party[3].name
-        cell.pokemon5Label.text = team.party[4].name
-        cell.pokemon6Label.text = team.party[5].name
+        cell.pokemon1Label.text = team.pokemonName1
+        cell.pokemon2Label.text = team.pokemonName2
+        cell.pokemon3Label.text = team.pokemonName3
+        cell.pokemon4Label.text = team.pokemonName4
+        cell.pokemon5Label.text = team.pokemonName5
+        cell.pokemon6Label.text = team.pokemonName6
 
         return cell
     }
@@ -91,6 +103,17 @@ class TeamListTableViewController: UITableViewController {
             let index = tableView.indexPathForSelectedRow!.row
             teamDetailViewController.team = teamList[index]
         }
+    }
+    
+    @IBAction func unwindToTeamListTableView(_ unwindSegue: UIStoryboardSegue) {
+        if let sourceViewController = unwindSegue.source as? TeamDetailViewController, sourceViewController.isEditted {
+            let indexPath = tableView.indexPathForSelectedRow!
+            teamList[indexPath.row] = sourceViewController.team
+            DispatchQueue.main.async {
+                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+        }
+        
     }
     
 
