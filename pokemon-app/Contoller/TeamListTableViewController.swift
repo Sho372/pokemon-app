@@ -75,6 +75,7 @@ class TeamListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.cell, for: indexPath) as! TeamTableViewCell
         let team = teamList[indexPath.row]
         cell.updateUI(with: team)
+        
         return cell
     }
     

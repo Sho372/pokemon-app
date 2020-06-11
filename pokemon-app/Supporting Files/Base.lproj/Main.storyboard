@@ -559,7 +559,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Juo-Rn-Dun">
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Juo-Rn-Dun">
                                                     <rect key="frame" x="0.0" y="-28" width="414" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="hCY-Qu-1cX"/>
@@ -638,7 +638,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMu-nU-Woz">
+                                                <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMu-nU-Woz">
                                                     <rect key="frame" x="0.0" y="-28" width="414" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="BJb-G1-z3l"/>
@@ -663,18 +663,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tet-wk-7Z6">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tet-wk-7Z6">
                                                     <rect key="frame" x="16" y="9.5" width="382" height="25"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qvj-ad-XWI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="71.5" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="KHs-vb-l89">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
@@ -699,18 +699,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aEU-Eg-0mP">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="aEU-Eg-0mP">
                                                     <rect key="frame" x="16" y="9.5" width="382" height="25"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z6Q-WH-whJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="71.5" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="7y7-Bf-7q3">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
@@ -735,18 +735,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AoD-g4-qyQ">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="AoD-g4-qyQ">
                                                     <rect key="frame" x="16" y="9.5" width="382" height="25"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wD3-1j-JgS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="71.5" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="wT8-y4-2ga">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
@@ -771,18 +771,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-QK-RRV">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-QK-RRV">
                                                     <rect key="frame" x="16" y="9.5" width="382" height="25"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NMQ-Fx-qEV">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="71.5" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="BT4-Q1-1Du">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
@@ -807,18 +807,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qcN-4E-cC4">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="qcN-4E-cC4">
                                                     <rect key="frame" x="16" y="9.5" width="382" height="25"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XGf-uI-csz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="71.5" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="HEh-H6-Gvd">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
@@ -843,18 +843,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="998-VW-KRn">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="998-VW-KRn">
                                                     <rect key="frame" x="16" y="9.5" width="382" height="25"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ef4-a8-dbL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="71.5" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="v7m-sC-jOK">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
@@ -883,18 +883,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1CP-VC-T5b">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1CP-VC-T5b">
                                                     <rect key="frame" x="16" y="9.5" width="382" height="25"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2QJ-cy-Not">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="bdD-we-rXe">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C6e-U8-JnI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="fFQ-wi-07W"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="rZT-J1-goK">
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
@@ -904,8 +905,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="1CP-VC-T5b" firstAttribute="leading" secondItem="fdE-C1-T46" secondAttribute="leading" constant="16" id="Eiw-sI-GYU"/>
                                                 <constraint firstItem="1CP-VC-T5b" firstAttribute="centerY" secondItem="fdE-C1-T46" secondAttribute="centerY" id="SnZ-cI-3IQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="1CP-VC-T5b" secondAttribute="trailing" constant="16" id="gYU-aE-aFH"/>
+                                                <constraint firstItem="1CP-VC-T5b" firstAttribute="centerY" secondItem="fdE-C1-T46" secondAttribute="centerY" id="xNv-iA-l2e"/>
                                                 <constraint firstItem="1CP-VC-T5b" firstAttribute="leading" secondItem="fdE-C1-T46" secondAttribute="leading" constant="16" id="yRJ-N9-UfZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -917,166 +920,171 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eTd-Vf-m1u">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="6K8-gS-KI2">
                                                     <rect key="frame" x="16" y="9.5" width="382" height="25"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q4u-9U-aO3">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="KBi-Gr-wAz">
-                                                            <rect key="frame" x="191" y="0.0" width="193" height="25"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ud-5k-dJP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="ymz-nZ-dgI"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="dRt-FL-kYe">
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="MDM-Ne-OVv"/>
+                                                        <constraint firstAttribute="height" constant="25" id="M8q-yi-ysu"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="eTd-Vf-m1u" secondAttribute="trailing" constant="16" id="J7z-AI-fPU"/>
-                                                <constraint firstItem="eTd-Vf-m1u" firstAttribute="centerY" secondItem="CsV-wm-9tI" secondAttribute="centerY" id="kzf-Gq-wSF"/>
-                                                <constraint firstItem="eTd-Vf-m1u" firstAttribute="leading" secondItem="CsV-wm-9tI" secondAttribute="leading" constant="16" id="qoE-VG-2JV"/>
+                                                <constraint firstAttribute="trailing" secondItem="6K8-gS-KI2" secondAttribute="trailing" constant="16" id="bsO-bu-d2W"/>
+                                                <constraint firstItem="6K8-gS-KI2" firstAttribute="centerY" secondItem="CsV-wm-9tI" secondAttribute="centerY" id="mSc-Ww-cUh"/>
+                                                <constraint firstItem="6K8-gS-KI2" firstAttribute="leading" secondItem="CsV-wm-9tI" secondAttribute="leading" constant="16" id="ucL-kh-MTO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lEl-0u-iVQ">
                                         <rect key="frame" x="0.0" y="830" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lEl-0u-iVQ" id="yRn-e0-RiL">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lEl-0u-iVQ" id="yRn-e0-RiL">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DyB-sG-n2X">
-                                                    <rect key="frame" x="16" y="9.5" width="240" height="25"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7sU-3x-R7F">
+                                                    <rect key="frame" x="16" y="5" width="382" height="34"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yFx-TF-5aw">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="SjT-5O-AfP">
-                                                            <rect key="frame" x="191" y="0.0" width="51" height="31"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-RO-PbV">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="bVD-Af-iyD"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="zvW-jG-SKN">
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="37t-5k-lCx"/>
+                                                        <constraint firstAttribute="height" constant="25" id="I2H-bg-xAf"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="DyB-sG-n2X" firstAttribute="leading" secondItem="yRn-e0-RiL" secondAttribute="leading" constant="16" id="XTa-so-2pi"/>
-                                                <constraint firstAttribute="trailing" secondItem="DyB-sG-n2X" secondAttribute="trailing" constant="16" id="cwU-R9-FZW"/>
-                                                <constraint firstItem="DyB-sG-n2X" firstAttribute="centerY" secondItem="yRn-e0-RiL" secondAttribute="centerY" id="ms2-Xl-VoS"/>
+                                                <constraint firstAttribute="trailing" secondItem="7sU-3x-R7F" secondAttribute="trailing" constant="16" id="5Ic-LA-qA8"/>
+                                                <constraint firstItem="7sU-3x-R7F" firstAttribute="centerY" secondItem="yRn-e0-RiL" secondAttribute="centerY" id="hIz-iu-9eV"/>
+                                                <constraint firstItem="7sU-3x-R7F" firstAttribute="leading" secondItem="yRn-e0-RiL" secondAttribute="leading" constant="16" id="zBF-4h-meb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ErE-9Y-rNW">
                                         <rect key="frame" x="0.0" y="873.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ErE-9Y-rNW" id="qIx-F4-54L">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ErE-9Y-rNW" id="qIx-F4-54L">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lnh-P1-4ZF">
-                                                    <rect key="frame" x="16" y="9.5" width="240" height="25"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="EOB-yp-OUb">
+                                                    <rect key="frame" x="16" y="5" width="382" height="34"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3F1-hC-eJd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="eJd-iy-mb5">
-                                                            <rect key="frame" x="191" y="0.0" width="51" height="31"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OIT-2w-DQa">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="MVg-6K-UgL"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Fua-qV-N5s">
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="DCM-s5-pFi"/>
+                                                        <constraint firstAttribute="height" constant="25" id="lCF-Nb-AWZ"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="lnh-P1-4ZF" secondAttribute="trailing" constant="16" id="0wg-eP-uU7"/>
-                                                <constraint firstItem="lnh-P1-4ZF" firstAttribute="centerY" secondItem="qIx-F4-54L" secondAttribute="centerY" id="4hS-4d-5Xf"/>
-                                                <constraint firstItem="lnh-P1-4ZF" firstAttribute="leading" secondItem="qIx-F4-54L" secondAttribute="leading" constant="16" id="Wpo-f4-wxz"/>
+                                                <constraint firstItem="EOB-yp-OUb" firstAttribute="leading" secondItem="qIx-F4-54L" secondAttribute="leading" constant="16" id="Xrs-9c-2yu"/>
+                                                <constraint firstAttribute="trailing" secondItem="EOB-yp-OUb" secondAttribute="trailing" constant="16" id="ZrG-vP-qg3"/>
+                                                <constraint firstItem="EOB-yp-OUb" firstAttribute="centerY" secondItem="qIx-F4-54L" secondAttribute="centerY" id="h1i-q1-Bec"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ev5-m7-NIH">
                                         <rect key="frame" x="0.0" y="917" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ev5-m7-NIH" id="97C-qD-AxH">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ev5-m7-NIH" id="97C-qD-AxH">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a0w-gX-iKo">
-                                                    <rect key="frame" x="16" y="9.5" width="240" height="25"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="fCZ-mn-Vf9">
+                                                    <rect key="frame" x="16" y="5" width="382" height="34"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B0p-Ia-xy6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Bms-1h-Uhi">
-                                                            <rect key="frame" x="191" y="0.0" width="51" height="31"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2lu-Ze-QMh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="ml9-v9-Bp9"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Zb2-Qg-iC2">
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="izp-u9-2j6"/>
+                                                        <constraint firstAttribute="height" constant="25" id="srT-Co-9jL"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="a0w-gX-iKo" firstAttribute="centerY" secondItem="97C-qD-AxH" secondAttribute="centerY" id="R8A-mf-bPf"/>
-                                                <constraint firstItem="a0w-gX-iKo" firstAttribute="leading" secondItem="97C-qD-AxH" secondAttribute="leading" constant="16" id="TO1-Q7-Mca"/>
-                                                <constraint firstAttribute="trailing" secondItem="a0w-gX-iKo" secondAttribute="trailing" constant="16" id="lQq-jb-MhT"/>
+                                                <constraint firstItem="fCZ-mn-Vf9" firstAttribute="centerY" secondItem="97C-qD-AxH" secondAttribute="centerY" id="5oU-6i-UR5"/>
+                                                <constraint firstAttribute="trailing" secondItem="fCZ-mn-Vf9" secondAttribute="trailing" constant="16" id="HhM-oK-tI1"/>
+                                                <constraint firstItem="fCZ-mn-Vf9" firstAttribute="leading" secondItem="97C-qD-AxH" secondAttribute="leading" constant="16" id="JxW-i0-kNa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QaJ-8v-6RN">
                                         <rect key="frame" x="0.0" y="960.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QaJ-8v-6RN" id="nkq-SD-Exh">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QaJ-8v-6RN" id="nkq-SD-Exh">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="au3-S4-lo3">
-                                                    <rect key="frame" x="16" y="9.5" width="240" height="25"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Rbz-dX-xpy">
+                                                    <rect key="frame" x="16" y="5" width="382" height="34"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vIN-T1-kp0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="1pL-OO-EbS">
-                                                            <rect key="frame" x="191" y="0.0" width="51" height="31"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNZ-Ts-RM1">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="2HD-F1-pTy"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="9tZ-Ov-eEW">
+                                                            <rect key="frame" x="333" y="0.0" width="51" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="5G9-4D-7Kr"/>
+                                                        <constraint firstAttribute="height" constant="25" id="fze-L6-rtG"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="au3-S4-lo3" secondAttribute="trailing" constant="16" id="8lC-ss-pvP"/>
-                                                <constraint firstItem="au3-S4-lo3" firstAttribute="leading" secondItem="nkq-SD-Exh" secondAttribute="leading" constant="16" id="Gdb-UB-fUq"/>
-                                                <constraint firstItem="au3-S4-lo3" firstAttribute="centerY" secondItem="nkq-SD-Exh" secondAttribute="centerY" id="fCX-Jn-M1K"/>
+                                                <constraint firstItem="Rbz-dX-xpy" firstAttribute="centerY" secondItem="nkq-SD-Exh" secondAttribute="centerY" id="Adm-aZ-zmW"/>
+                                                <constraint firstAttribute="trailing" secondItem="Rbz-dX-xpy" secondAttribute="trailing" constant="16" id="YXL-r8-4yc"/>
+                                                <constraint firstItem="Rbz-dX-xpy" firstAttribute="leading" secondItem="nkq-SD-Exh" secondAttribute="leading" constant="16" id="eaM-gu-Lst"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1115,12 +1123,30 @@
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="Juo-Rn-Dun" id="uo8-e2-Fce"/>
-                        <outlet property="myPokemonLabel" destination="Qvj-ad-XWI" id="CTo-zg-Deh"/>
-                        <outlet property="myPokemonSwitch" destination="KHs-vb-l89" id="w0n-Gz-LFO"/>
-                        <outlet property="myPokemonTable" destination="PQe-n3-Q8p" id="0Rw-Pq-5GQ"/>
-                        <outlet property="opponentPokemonLabel" destination="2QJ-cy-Not" id="KIN-0g-yhF"/>
-                        <outlet property="opponentPokemonSwitch" destination="bdD-we-rXe" id="QrL-eQ-gDs"/>
-                        <outlet property="opponentTable" destination="MF2-4D-Eaq" id="h1A-ou-0SS"/>
+                        <outlet property="myPokemonLabel1" destination="Qvj-ad-XWI" id="d2S-ru-dc5"/>
+                        <outlet property="myPokemonLabel2" destination="Z6Q-WH-whJ" id="VaJ-Dc-gKg"/>
+                        <outlet property="myPokemonLabel3" destination="wD3-1j-JgS" id="Mnd-nb-LeF"/>
+                        <outlet property="myPokemonLabel4" destination="NMQ-Fx-qEV" id="BEU-32-Y16"/>
+                        <outlet property="myPokemonLabel5" destination="XGf-uI-csz" id="NtI-Y9-n8u"/>
+                        <outlet property="myPokemonLabel6" destination="ef4-a8-dbL" id="8GY-LD-4n6"/>
+                        <outlet property="myPokemonSwitch1" destination="KHs-vb-l89" id="iqK-dA-HiW"/>
+                        <outlet property="myPokemonSwitch2" destination="7y7-Bf-7q3" id="Lr2-gP-vfk"/>
+                        <outlet property="myPokemonSwitch3" destination="wT8-y4-2ga" id="cau-oT-9Lg"/>
+                        <outlet property="myPokemonSwitch4" destination="BT4-Q1-1Du" id="moA-Bg-Rrc"/>
+                        <outlet property="myPokemonSwitch5" destination="HEh-H6-Gvd" id="kNS-0b-caa"/>
+                        <outlet property="myPokemonSwitch6" destination="v7m-sC-jOK" id="tWu-Jb-w4M"/>
+                        <outlet property="opponentSwitch1" destination="rZT-J1-goK" id="Xlh-C6-CMr"/>
+                        <outlet property="opponentSwitch2" destination="dRt-FL-kYe" id="dhY-gy-8XJ"/>
+                        <outlet property="opponentSwitch3" destination="zvW-jG-SKN" id="j37-SP-MGl"/>
+                        <outlet property="opponentSwitch4" destination="Fua-qV-N5s" id="qdc-h6-o7b"/>
+                        <outlet property="opponentSwitch5" destination="Zb2-Qg-iC2" id="amg-FJ-rTV"/>
+                        <outlet property="opponentSwitch6" destination="9tZ-Ov-eEW" id="N85-Lz-bTk"/>
+                        <outlet property="opponentTextField1" destination="C6e-U8-JnI" id="SMB-1K-1Uv"/>
+                        <outlet property="opponentTextField2" destination="1Ud-5k-dJP" id="oIa-7J-omL"/>
+                        <outlet property="opponentTextField3" destination="CT7-RO-PbV" id="frk-bY-LkF"/>
+                        <outlet property="opponentTextField4" destination="OIT-2w-DQa" id="XZD-GH-2nG"/>
+                        <outlet property="opponentTextField5" destination="2lu-Ze-QMh" id="Sg9-U7-Mtk"/>
+                        <outlet property="opponentTextField6" destination="oNZ-Ts-RM1" id="OcS-2O-DlJ"/>
                         <outlet property="resultSegment" destination="AyC-Oo-mxy" id="37f-ZV-chH"/>
                         <outlet property="rightBarButton" destination="pPf-2h-JAX" id="rQq-Ia-qKW"/>
                         <outlet property="seasonPicker" destination="gHT-7R-sY1" id="zeR-EL-TsT"/>
