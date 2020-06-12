@@ -67,9 +67,27 @@ class TeamSelectViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
     private func updateDatabase(){
         container?.performBackgroundTask{ context in
-            let firstTeam = Team(name: "first team", createdAt: Date(), isArchive: false, updatedAt: Date(), pokemonName1: "aaa", pokemonName2: "bbb", pokemonName3: "ccc", pokemonName4: "ddd", pokemonName5: "eee", pokemonName6: "fff"
+            let firstTeam = Team(name: "Yellow",
+                                     createdAt: Date(),
+                                     isArchive: false,
+                                     updatedAt: Date(),
+                                     pokemonName1: "Pikachu",
+                                     pokemonName2: "Raichu",
+                                     pokemonName3: "Sandshrew",
+                                     pokemonName4: "Ponyta",
+                                     pokemonName5: "Hypno",
+                                     pokemonName6: "Drowzee"
             )
-            let secondTeam = Team(name: "second team", createdAt: Date(), isArchive: false, updatedAt: Date(), pokemonName1: "aaa", pokemonName2: "bbb", pokemonName3: "ccc", pokemonName4: "ddd", pokemonName5: "eee", pokemonName6: "fff"
+            let secondTeam = Team(name: "Red",
+                                     createdAt: Date(),
+                                     isArchive: false,
+                                     updatedAt: Date(),
+                                     pokemonName1: "Charizard",
+                                     pokemonName2: "Blastoise",
+                                     pokemonName3: "Venusaur",
+                                     pokemonName4: "Clefable",
+                                     pokemonName5: "Ninetales",
+                                     pokemonName6: "Vileplume"
             )
             _ = try? ManagedTeam.findOrCreateTeam(matching: firstTeam, in: context)
             _ = try? ManagedTeam.findOrCreateTeam(matching: secondTeam, in: context)

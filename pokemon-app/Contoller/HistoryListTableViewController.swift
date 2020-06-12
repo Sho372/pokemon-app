@@ -25,23 +25,23 @@ class HistoryListTableViewController: UITableViewController {
         // Bring team data from database
         
         //[Sampledata] START
-        let firstHistory = History(teamName: "first team", seasonName: "season1", isWin: true, isSingle: true, createdAt: Date(), updatedAt: Date())
+        let firstHistory = History(teamName: "Yellow", seasonName: "March", isWin: true, isSingle: true, createdAt: Date(), updatedAt: Date())
         
-        let secondHistory = History(teamName: "second team", seasonName: "season3", isWin: false, isSingle: true, createdAt: Date(), updatedAt: Date())
+        let secondHistory = History(teamName: "Red", seasonName: "March", isWin: false, isSingle: true, createdAt: Date(), updatedAt: Date())
         
         let selects = [
-            SelectedPokemon(sequence: 1, selectedPokemonName: "aaa"),
-            SelectedPokemon(sequence: 2, selectedPokemonName: "bbb")
-            ,SelectedPokemon(sequence: 3, selectedPokemonName: "ccc")
+            SelectedPokemon(sequence: 1, selectedPokemonName: "Pikachu"),
+            SelectedPokemon(sequence: 2, selectedPokemonName: "Raichu")
+            ,SelectedPokemon(sequence: 3, selectedPokemonName: "Sandshrew")
         ]
         
         let opponets = [
-            OpponentPokemon(sequence: 1, opponentPokemonName: "ddd", isSelected: true),
-            OpponentPokemon(sequence: 2, opponentPokemonName: "eee", isSelected: false),
-            OpponentPokemon(sequence: 3, opponentPokemonName: "fff", isSelected: false),
-            OpponentPokemon(sequence: 4, opponentPokemonName: "ggg", isSelected: true),
-            OpponentPokemon(sequence: 5, opponentPokemonName: "hhh", isSelected: false),
-            OpponentPokemon(sequence: 6, opponentPokemonName: "iii", isSelected: true),
+            OpponentPokemon(sequence: 1, opponentPokemonName: "Charizard", isSelected: true),
+            OpponentPokemon(sequence: 2, opponentPokemonName: "Blastoise", isSelected: false),
+            OpponentPokemon(sequence: 3, opponentPokemonName: "Venusaur", isSelected: false),
+            OpponentPokemon(sequence: 4, opponentPokemonName: "Clefable", isSelected: true),
+            OpponentPokemon(sequence: 5, opponentPokemonName: "Ninetales", isSelected: false),
+            OpponentPokemon(sequence: 6, opponentPokemonName: "Vileplume", isSelected: true),
         ]
         //[Sample data] END
         

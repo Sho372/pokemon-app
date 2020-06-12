@@ -21,7 +21,18 @@ class TeamListTableViewController: UITableViewController {
                                  pokemonName4: "Ponyta",
                                  pokemonName5: "Hypno",
                                  pokemonName6: "Drowzee"
-        )]
+        ),
+    Team(name: "Red",
+                             createdAt: Date(),
+                             isArchive: false,
+                             updatedAt: Date(),
+                             pokemonName1: "Charizard",
+                             pokemonName2: "Blastoise",
+                             pokemonName3: "Venusaur",
+                             pokemonName4: "Clefable",
+                             pokemonName5: "Ninetales",
+                             pokemonName6: "Vileplume"
+    )]
     
     // MARK: - Dependency Injection
     var updatedTeam: Team?

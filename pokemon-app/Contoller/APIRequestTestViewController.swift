@@ -42,9 +42,9 @@ class APIRequestTestViewController: UIViewController {
             )
             let secondTeam = Team(name: "second team", createdAt: Date(), isArchive: false, updatedAt: Date(), pokemonName1: "aaa", pokemonName2: "bbb", pokemonName3: "ccc", pokemonName4: "ddd", pokemonName5: "eee", pokemonName6: "fff"
             )
-            _ = try? ManagedTeam.findOrCreateTeam(matching: firstTeam, in: context)
-            _ = try? ManagedTeam.findOrCreateTeam(matching: secondTeam, in: context)
-            _ = try? context.save()
+//            _ = try? ManagedTeam.findOrCreateTeam(matching: firstTeam, in: context)
+//            _ = try? ManagedTeam.findOrCreateTeam(matching: secondTeam, in: context)
+//            _ = try? context.save()
             
             let count = ManagedTeam.count(in: context)
             print("\(count)teams" )
