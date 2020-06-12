@@ -10,18 +10,8 @@ import UIKit
 
 class TeamListTableViewController: UITableViewController {
     
-    // MARK: - TEST DATA
-    var teamList: [Team] = [Team(name: "Yellow",
-                                 createdAt: Date(),
-                                 isArchive: false,
-                                 updatedAt: Date(),
-                                 pokemonName1: "Pikachu",
-                                 pokemonName2: "Raichu",
-                                 pokemonName3: "Sandshrew",
-                                 pokemonName4: "Ponyta",
-                                 pokemonName5: "Hypno",
-                                 pokemonName6: "Drowzee"
-        )]
+    // MARK: - Data Object
+    var teamList: [Team] = [Team(name: "Yellow", createdAt: Date(), isArchive: false, updatedAt: Date(), pokemonName1: "Pikachu", pokemonName2: "Raichu", pokemonName3: "Sandshrew", pokemonName4: "Ponyta", pokemonName5: "Hypno", pokemonName6: "Drowzee")]
     
     // MARK: - Dependency Injection
     var updatedTeam: Team?
@@ -84,6 +74,13 @@ class TeamListTableViewController: UITableViewController {
     // MARK: - Table View Delegate
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            teamList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {

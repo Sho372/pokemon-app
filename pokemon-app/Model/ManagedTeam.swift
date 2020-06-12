@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 class ManagedTeam: NSManagedObject {
+    
     class func findOrCreateTeam(matching teamInfo: Team, in context: NSManagedObjectContext) throws -> ManagedTeam {
 
         let request: NSFetchRequest<ManagedTeam> = ManagedTeam.fetchRequest()
@@ -88,4 +89,5 @@ class ManagedTeam: NSManagedObject {
         }
         return []
     }
+    
 }

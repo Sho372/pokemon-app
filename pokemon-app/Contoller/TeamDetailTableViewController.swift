@@ -31,6 +31,8 @@ class TeamDetailTableViewController: UITableViewController {
         static let unwindCancel = "UnwindCancelSegue"
     }
     
+    
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,7 @@ class TeamDetailTableViewController: UITableViewController {
     
     @IBAction func returnKeyPressed(_ sender: UITextField) {
         sender.resignFirstResponder()
+        validateData()
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
@@ -70,6 +73,8 @@ class TeamDetailTableViewController: UITableViewController {
     // MARK: - Table View Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch (indexPath.section) {
+        case (1):
+            tableView.deselectRow(at: indexPath, animated: true)
         case (2):
             performSegue(withIdentifier: Identifier.select, sender: self)
         default:
@@ -118,6 +123,7 @@ extension TeamDetailTableViewController: SelectPokemonTableViewControllerDelegat
                 cell.detailTextLabel?.text = selectedPokemon
             }
         }
+        validateData()
     }
     
 }
