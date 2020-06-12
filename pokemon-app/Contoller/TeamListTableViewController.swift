@@ -28,20 +28,20 @@ class TeamListTableViewController: UITableViewController {
     
     // MARK: - Identifier
     struct Identifier {
-        static let editDetail = "TeamDetailSegue"
+        static let editTeam = "EditTeamSegue"
+        static let addTeam = "AddTeamSegue"
         static let cell = "TeamTableViewCell"
     }
     
-    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
     
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Identifier.editDetail {
+        if segue.identifier == Identifier.editTeam {
             let indexPath = tableView.indexPathForSelectedRow!
             let team = teamList[indexPath.row]
             let navController = segue.destination as! UINavigationController
@@ -51,18 +51,20 @@ class TeamListTableViewController: UITableViewController {
     }
     
     @IBAction func unwindToTeamListTableView(segue: UIStoryboardSegue) {
-        if let identifier = segue.identifier, identifier == TeamDetailTableViewController.Identifier.unwind {
+        if let identifier = segue.identifier, identifier == TeamDetailTableViewController.Identifier.unwindWithData {
             let sourceViewController = segue.source as! TeamDetailTableViewController
             if let team = sourceViewController.team {
                 if let selectedIndexPath = tableView.indexPathForSelectedRow {
                     teamList[selectedIndexPath.row] = team
                     tableView.reloadRows(at: [selectedIndexPath], with: .automatic)
-                    tableView.deselectRow(at: selectedIndexPath, animated: true)
                 } else {
                     teamList.append(team)
                     tableView.insertRows(at: [IndexPath(row: teamList.count - 1, section: 0)], with: .automatic)
                 }
             }
+        }
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectedIndexPath, animated: true)
         }
     }
     
@@ -89,4 +91,7 @@ class TeamListTableViewController: UITableViewController {
         teamList.insert(teamToMove, at: destinationIndexPath.row)
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Identifier.editTeam, sender: self)
+    }
 }

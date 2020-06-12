@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Pokemons: Codable {
+class Pokemons: Codable {
+    let count: Int
     let results: [Pokemon]
 }
 
