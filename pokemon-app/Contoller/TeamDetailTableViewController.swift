@@ -69,8 +69,6 @@ class TeamDetailTableViewController: UITableViewController {
     
     // MARK: - Table View Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        tableView.deselectRow(at: indexPath, animated: true)
-        
         switch (indexPath.section) {
         case (2):
             performSegue(withIdentifier: Identifier.select, sender: self)
@@ -100,11 +98,24 @@ class TeamDetailTableViewController: UITableViewController {
             case Identifier.unwindCancel:
                 break
             case Identifier.select:
-                let indexPath = tableView.indexPathForSelectedRow!
+//                let indexPath = tableView.indexPathForSelectedRow!
                 let selectPokemonTVC = segue.destination as! SelectPokemonTableViewController
-                selectPokemonTVC.selectedPokemon = tableView.cellForRow(at: indexPath)!.detailTextLabel?.text ?? ""
+                selectPokemonTVC.delegate = self
+//                selectPokemonTVC.selectedPokemon = tableView.cellForRow(at: indexPath)!.detailTextLabel?.text ?? ""
             default:
                 break
+            }
+        }
+    }
+    
+}
+
+extension TeamDetailTableViewController: SelectPokemonTableViewControllerDelegate {
+    
+    func didSelect(selectedPokemon: String) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                cell.detailTextLabel?.text = selectedPokemon
             }
         }
     }

@@ -36,6 +36,7 @@ class PokeAPIHandler {
     
     func requestJSON(completion: @escaping (Pokemons?) -> Void) {
         if let cachedPokemons = cache.object(forKey: Key.cachedPokemonNames) {
+            debugPrint("Cached Pokemon Used")
             completion(cachedPokemons)
         } else {
             let url = URL(string: PokeAPIHandler.baseURL)!
@@ -56,7 +57,7 @@ class PokeAPIHandler {
     
     func fetch<T: Decodable>(from url: URL, completion: @escaping (Result<T, NetworkError>) -> Void) {
         dataTask?.cancel()
-        
+        debugPrint("Fetch start")
         dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
                 completion(.failure(.client(message: "invalid request")))
@@ -77,6 +78,7 @@ class PokeAPIHandler {
                 completion(.failure(.client(message: error.localizedDescription)))
             }
         }
+        debugPrint("Fetch done")
         dataTask?.resume()
     }
     

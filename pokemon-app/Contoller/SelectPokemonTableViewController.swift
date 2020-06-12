@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SelectPokemonTableViewControllerDelegate: class {
+    func didSelect(selectedPokemon: String)
+}
+
 class SelectPokemonTableViewController: UITableViewController {
     
     // MARK: - Dependency Injection
@@ -18,7 +22,11 @@ class SelectPokemonTableViewController: UITableViewController {
         static let cell = "SelectPokemonCell"
     }
     
+    // MARK: - Delegate
+    weak var delegate: SelectPokemonTableViewControllerDelegate?
+    
     private var pokedex = PokeDex()
+    private var keys = [String]()
     private let str = NSCharacterSet.capitalizedLetters
     
     // MARK: - View Life Cycle
@@ -27,15 +35,13 @@ class SelectPokemonTableViewController: UITableViewController {
         navigationItem.title = "Select Pokemon"
         
         PokeAPIHandler.shared.requestJSON { [weak self] (pokemons) in
-            print("Fetch start")
+            debugPrint("JSON Requested")
             if let pokemons = pokemons {
-                
                 let pokemonList = pokemons.results.map({ $0.name.capitalized })
                 let groupedDictionary = Dictionary(grouping: pokemonList, by: { String($0.prefix(1))})
                 let keys = groupedDictionary.keys.sorted()
+                self?.keys = keys
                 self?.pokedex.section = keys.map { Section(letter: $0, pokemons: groupedDictionary[$0]!.sorted()) }
-                
-                print("Fetch done")
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
@@ -52,6 +58,10 @@ class SelectPokemonTableViewController: UITableViewController {
         return 26
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return keys[section]
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.cell, for: indexPath)
         cell.textLabel?.text = pokedex.section[indexPath.section].pokemons?[indexPath.row]
@@ -59,9 +69,11 @@ class SelectPokemonTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        tableView.deselectRow(at: indexPath, animated: true)
-        selectedPokemon = pokedex.section[indexPath.section].pokemons?[indexPath.row]
+        delegate?.didSelect(selectedPokemon: pokedex.section[indexPath.section].pokemons?[indexPath.row] ?? "Not Set")
+        navigationController?.popViewController(animated: true)
     }
     
-    
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return keys
+    }
 }

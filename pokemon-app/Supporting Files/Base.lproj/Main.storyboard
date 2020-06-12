@@ -49,7 +49,7 @@
                                                     <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
                                                     <color key="tintColor" red="0.91463369130000005" green="0.41028395299999998" blue="0.23904901740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                     <connections>
                                                         <action selector="returnKeyPressed:" destination="DHG-4s-ONf" eventType="editingDidEnd" id="qbX-4R-T4e"/>
                                                         <action selector="textEditingChanged:" destination="DHG-4s-ONf" eventType="editingChanged" id="FMH-0c-2Tm"/>
@@ -285,13 +285,13 @@
         <scene sceneID="xhK-fP-zTY">
             <objects>
                 <tableViewController id="Ht1-Nh-4k9" customClass="SelectPokemonTableViewController" customModule="pokemon_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="gj8-f1-VPI">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gj8-f1-VPI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexColor" red="0.91463369130000005" green="0.41028395299999998" blue="0.23904901740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectPokemonCell" textLabel="jlp-Og-IoK" style="IBUITableViewCellStyleDefault" id="4gq-EY-TT6">
-                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4gq-EY-TT6" id="bPy-Z4-o1s">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
