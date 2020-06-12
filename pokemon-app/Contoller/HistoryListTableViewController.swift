@@ -25,9 +25,9 @@ class HistoryListTableViewController: UITableViewController {
         // Bring team data from database
         
         //[Sampledata] START
-        let firstHistory = History(teamName: "mokou", seasonName: "season1", isWin: true, isSingle: true, createdAt: Date(), updatedAt: Date())
+        let firstHistory = History(teamName: "first team", seasonName: "season1", isWin: true, isSingle: true, createdAt: Date(), updatedAt: Date())
         
-        let secondHistory = History(teamName: "baroi", seasonName: "season3", isWin: false, isSingle: true, createdAt: Date(), updatedAt: Date())
+        let secondHistory = History(teamName: "second team", seasonName: "season3", isWin: false, isSingle: true, createdAt: Date(), updatedAt: Date())
         
         let selects = [
             SelectedPokemon(sequence: 1, selectedPokemonName: "aaa"),
@@ -120,7 +120,7 @@ class HistoryListTableViewController: UITableViewController {
         if segue.identifier == segueId {
             let detailView = segue.destination as! HistoryDetailTableViewController
             detailView.screenMode = HistoryDetailTableViewController.ScreenMode.refer
-            detailView.history = selectedHistory!
+            detailView.historyId = selectedHistory?.objectID
         }
     }
 }

@@ -39,4 +39,11 @@ class ManagedHistory: NSManagedObject {
         }
         return []
     }
+    
+    class func fetchWithObjectId(objectId: NSManagedObjectID, in context: NSManagedObjectContext) throws -> ManagedHistory? {
+        if let history = try? context.existingObject(with: objectId) {
+            return history as? ManagedHistory
+        }
+        return nil
+    }
 }

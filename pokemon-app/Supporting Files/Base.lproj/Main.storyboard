@@ -10,7 +10,6 @@
         <!--Navigation Controller-->
         <scene sceneID="7Gf-Hu-Xc8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zbK-Jl-qcP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="fTz-Hv-YER" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8hb-xZ-fFp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -24,6 +23,7 @@
                         <segue destination="DHG-4s-ONf" kind="relationship" relationship="rootViewController" id="rle-Kn-UO1"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbK-Jl-qcP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3739" y="521"/>
         </scene>
@@ -428,13 +428,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="318" height="20.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of battle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hn-H7-6dW">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="154" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="318" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History Id" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAL-dO-qlX">
-                                                                    <rect key="frame" x="164" y="0.0" width="154" height="20.5"/>
+                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History Id" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAL-dO-qlX">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -534,7 +534,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="History" id="xJz-4Z-llW"/>
                     <connections>
-                        <segue destination="U5B-Wp-uLr" kind="show" id="hYs-9B-Goq"/>
+                        <segue destination="U5B-Wp-uLr" kind="show" identifier="toHistoryDetail" id="hYs-9B-Goq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kd1-WY-l13" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -638,17 +638,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMu-nU-Woz">
-                                                    <rect key="frame" x="0.0" y="-28" width="414" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="BJb-G1-z3l"/>
-                                                    </constraints>
-                                                </pickerView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zat-b7-aUI">
+                                                    <rect key="frame" x="20" y="11.5" width="358" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="oMu-nU-Woz" secondAttribute="trailing" id="SEY-qo-ji5"/>
-                                                <constraint firstItem="oMu-nU-Woz" firstAttribute="centerY" secondItem="XLh-jR-jYV" secondAttribute="centerY" id="Tgq-At-xlf"/>
-                                                <constraint firstItem="oMu-nU-Woz" firstAttribute="leading" secondItem="XLh-jR-jYV" secondAttribute="leading" id="inc-tY-zIx"/>
+                                                <constraint firstItem="zat-b7-aUI" firstAttribute="leading" secondItem="XLh-jR-jYV" secondAttribute="leadingMargin" id="0XM-Bb-OD2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zat-b7-aUI" secondAttribute="trailing" constant="16" id="Spr-do-y5y"/>
+                                                <constraint firstItem="zat-b7-aUI" firstAttribute="centerY" secondItem="XLh-jR-jYV" secondAttribute="centerY" id="cR7-3B-CTh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -673,9 +673,12 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="KHs-vb-l89">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="KHs-vb-l89">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapMyPokemonSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="dtq-eH-Ciz"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -709,9 +712,12 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="7y7-Bf-7q3">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="7y7-Bf-7q3">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapMyPokemonSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="bUV-jX-PCh"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -745,9 +751,12 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="wT8-y4-2ga">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="wT8-y4-2ga">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapMyPokemonSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="W3I-xD-uDf"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -781,9 +790,12 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="BT4-Q1-1Du">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="BT4-Q1-1Du">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapMyPokemonSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="tnZ-C0-dfM"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -817,9 +829,12 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="HEh-H6-Gvd">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="HEh-H6-Gvd">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapMyPokemonSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="ka1-ag-Ljy"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -853,9 +868,12 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="v7m-sC-jOK">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="v7m-sC-jOK">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapMyPokemonSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="tP2-8r-JJM"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -894,9 +912,12 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="rZT-J1-goK">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="rZT-J1-goK">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapOpponentSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="A6S-lt-d7L"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -931,9 +952,12 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="dRt-FL-kYe">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="dRt-FL-kYe">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapOpponentSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="Xms-2b-xVE"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -966,9 +990,12 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="zvW-jG-SKN">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="zvW-jG-SKN">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapOpponentSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="Cfw-HL-atO"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -1001,9 +1028,12 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Fua-qV-N5s">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Fua-qV-N5s">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapOpponentSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="2Gj-4G-RDf"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -1036,9 +1066,12 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Zb2-Qg-iC2">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Zb2-Qg-iC2">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapOpponentSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="0tu-Ye-XPc"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -1071,9 +1104,12 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="9tZ-Ov-eEW">
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="9tZ-Ov-eEW">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <connections>
+                                                                <action selector="tapOpponentSwitch:" destination="U5B-Wp-uLr" eventType="valueChanged" id="xfR-Ax-tma"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -1119,7 +1155,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="cLk-Ty-bHy">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="pPf-2h-JAX"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Edit" id="pPf-2h-JAX">
+                                <connections>
+                                    <segue destination="U5B-Wp-uLr" kind="show" identifier="toSelf" id="u7I-VZ-qbF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="done" id="Yz7-RM-eDc">
+                                <connections>
+                                    <action selector="tapDoneButton:" destination="U5B-Wp-uLr" id="vr2-YS-GOf"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="Juo-Rn-Dun" id="uo8-e2-Fce"/>
@@ -1148,10 +1195,9 @@
                         <outlet property="opponentTextField5" destination="2lu-Ze-QMh" id="Sg9-U7-Mtk"/>
                         <outlet property="opponentTextField6" destination="oNZ-Ts-RM1" id="OcS-2O-DlJ"/>
                         <outlet property="resultSegment" destination="AyC-Oo-mxy" id="37f-ZV-chH"/>
-                        <outlet property="rightBarButton" destination="pPf-2h-JAX" id="rQq-Ia-qKW"/>
                         <outlet property="seasonPicker" destination="gHT-7R-sY1" id="zeR-EL-TsT"/>
                         <outlet property="singleDoubleSegment" destination="WKM-6X-avm" id="Wgw-TY-fcS"/>
-                        <outlet property="teamPicker" destination="oMu-nU-Woz" id="APs-Fp-8Nz"/>
+                        <outlet property="teamLabel" destination="zat-b7-aUI" id="1jq-0b-GT6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PvK-eU-g7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1215,7 +1261,7 @@
                                 <color key="tintColor" red="0.15233135219999999" green="0.40501531959999998" blue="0.69562840459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="arrow.right.circle.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="U5B-Wp-uLr" kind="show" id="QkU-o9-HuS"/>
+                                    <segue destination="U5B-Wp-uLr" kind="show" identifier="toHistoryDetail" id="QkU-o9-HuS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1233,6 +1279,9 @@
                         <viewLayoutGuide key="safeArea" id="g0H-fB-yCf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="rwp-5u-sAv"/>
+                    <connections>
+                        <outlet property="teamPicker" destination="4jm-N9-fQs" id="aBp-ZK-VBK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bhs-qN-i8j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
