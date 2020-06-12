@@ -97,6 +97,13 @@ class TeamListTableViewController: UITableViewController {
         return .delete
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            teamList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let teamToMove = teamList.remove(at: sourceIndexPath.row)
         teamList.insert(teamToMove, at: destinationIndexPath.row)
