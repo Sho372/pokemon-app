@@ -12,25 +12,22 @@ import CoreData
 class HistoryListTableViewController: UITableViewController {
     
     private let cellId = "HistoryCell"
+    private let segueId = "toHistoryDetail"
     
     private var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     
     private var historyList: [ManagedHistory] = []
-
-    // MARK: Fix this after implementing CoreData part
-//    var historyList: [History] = [
-//        History(date: Date(), season: "June", party: [Pokemon(name: "Pikachu")], isChosen: [true], battleResult: true),
-//        History(date: Date(), season: "May", party: [Pokemon(name: "Ditto")], isChosen: [true], battleResult: false)
-//    ]
+    
+    private var selectedHistory: ManagedHistory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Bring team data from database
         
         //[Sampledata] START
-        let firstHistory = History(teamName: "mokou", seasonName: "season1", isWin: true, isSingle: true, createdAt: Date(), updatedAt: Date())
+        let firstHistory = History(teamName: "first team", seasonName: "season1", isWin: true, isSingle: true, createdAt: Date(), updatedAt: Date())
         
-        let secondHistory = History(teamName: "baroi", seasonName: "season3", isWin: false, isSingle: true, createdAt: Date(), updatedAt: Date())
+        let secondHistory = History(teamName: "second team", seasonName: "season3", isWin: false, isSingle: true, createdAt: Date(), updatedAt: Date())
         
         let selects = [
             SelectedPokemon(sequence: 1, selectedPokemonName: "aaa"),
@@ -82,8 +79,6 @@ class HistoryListTableViewController: UITableViewController {
         _ = try? context!.save()
     }
 
-    // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.historyList.count
@@ -114,10 +109,18 @@ class HistoryListTableViewController: UITableViewController {
 
         return cell
     }
+ 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedHistory = historyList[indexPath.row]
+        
+        performSegue(withIdentifier: segueId, sender: nil)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toHistoryDetail" {
-            let detailView = segue.destination as! HistoryDetailViewController
+        if segue.identifier == segueId {
+            let detailView = segue.destination as! HistoryDetailTableViewController
+            detailView.screenMode = HistoryDetailTableViewController.ScreenMode.refer
+            detailView.historyId = selectedHistory?.objectID
         }
     }
 }

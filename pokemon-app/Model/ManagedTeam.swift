@@ -40,6 +40,24 @@ class ManagedTeam: NSManagedObject {
         return team
     }
     
+    class func findTeam(matching teamName: String, in context: NSManagedObjectContext) throws -> ManagedTeam? {
+
+        let request: NSFetchRequest<ManagedTeam> = ManagedTeam.fetchRequest()
+        request.predicate = NSPredicate(format: "name = %@", teamName)
+        do {
+          let matches = try context.fetch(request)
+          if matches.count > 0 {
+            assert(matches.count == 1, "ManagedTeam.findOrCreateTeam -- database inconsistency")
+            let matchedTeam = matches[0]
+            return matchedTeam
+          }
+        } catch {
+          throw error
+        }
+        
+        return nil
+    }
+
     /// Get count of entities of Team
     /// - Parameters:
     ///   - in: context
